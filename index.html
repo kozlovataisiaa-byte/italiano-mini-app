@@ -3,48 +3,256 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Italiano · Verbi riflessivi</title>
+  <title>Italiano — Verbi riflessivi</title>
+  <meta name="theme-color" content="#f5f1e8" />
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root{
+      --bg:#f5f1e8;
+      --card:#fffdf8;
+      --ink:#1f1f1a;
+      --muted:#77736a;
+      --line:#e7e0d3;
+      --accent:#1f7a4c;
+      --accent-soft:#e9f4ed;
+      --danger:#a33b2f;
+      --danger-soft:#faece9;
+      --warn:#a66a17;
+      --warn-soft:#fff3df;
+      --shadow:0 14px 30px rgba(53,45,32,.08);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{min-height:100vh}
+    button,input,textarea{font:inherit}
+
+    .app{
+      width:min(100%,720px);
+      margin:0 auto;
+      padding:20px 16px calc(28px + env(safe-area-inset-bottom));
+    }
+
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+    .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+    .progress-pill{font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:8px 11px;border-radius:999px}
+
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:40px;line-height:1;margin:8px 0 0;letter-spacing:-.03em}
+    .subtitle{margin:8px 0 22px;color:var(--muted);font-size:15px}
+
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    .verb-card{padding:22px;margin-bottom:16px}
+    .verb-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:18px}
+    .verb-title{font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:700;letter-spacing:-.02em}
+    .verb-translation{color:var(--muted);font-size:15px;margin-top:4px}
+    .tense{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:#f0eadf;padding:8px 10px;border-radius:999px;color:#5d584f}
+
+    .conjugation{display:grid;grid-template-columns:1fr 1.3fr;gap:0;border-top:1px solid var(--line)}
+    .row{display:contents}
+    .cell{padding:11px 4px;border-bottom:1px solid var(--line);font-size:15px}
+    .cell.person{color:var(--muted)}
+    .cell.form{font-weight:750}
+    .row:last-child .cell{border-bottom:0}
+
+    .hint{margin-top:16px;padding:12px 14px;background:#f7f2e8;border-radius:16px;font-size:14px;color:#5e5a52}
+    .hint b{color:var(--ink)}
+
+    .exercise{padding:22px}
+    .kicker{font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+    .prompt{font-family:Georgia,"Times New Roman",serif;font-size:28px;line-height:1.25;letter-spacing:-.015em;margin:0 0 18px}
+
+    textarea{
+      width:100%;min-height:108px;resize:none;border:1.5px solid #d8d0c1;border-radius:18px;background:#fff;padding:16px 17px;color:var(--ink);outline:none;transition:.2s;border-color ease,.2s box-shadow ease;
+    }
+    textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(31,122,76,.1)}
+    textarea::placeholder{color:#aaa49a}
+
+    .primary{width:100%;margin-top:12px;border:0;border-radius:16px;background:var(--accent);color:white;padding:15px 18px;font-weight:800;cursor:pointer}
+    .primary:active{transform:translateY(1px)}
+
+    .feedback{display:none;margin-top:16px;border-radius:18px;padding:16px}
+    .feedback.show{display:block}
+    .feedback.good{background:var(--accent-soft);color:#24573c}
+    .feedback.almost{background:var(--warn-soft);color:#7c551b}
+    .feedback.bad{background:var(--danger-soft);color:#7a352f}
+    .feedback-title{font-weight:850;margin-bottom:8px}
+    .answer-line{font-weight:750;color:var(--ink);margin:6px 0 8px}
+    .feedback small{font-size:13px;line-height:1.5}
+
+    .actions{display:none;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .actions.show{display:grid}
+    .secondary,.ghost{border-radius:15px;padding:13px 14px;font-weight:750;cursor:pointer}
+    .secondary{border:1px solid var(--line);background:#fff;color:var(--ink)}
+    .ghost{border:0;background:transparent;color:var(--muted)}
+
+    .footer-nav{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
+    .prev{border:0;background:transparent;padding:10px 2px;color:var(--muted);font-weight:700;cursor:pointer}
+    .counter{font-size:13px;color:var(--muted)}
+
+    @media (max-width:480px){
+      .app{padding:16px 12px calc(22px + env(safe-area-inset-bottom))}
+      h1{font-size:34px}
+      .verb-card,.exercise{padding:18px}
+      .prompt{font-size:24px}
+      .actions{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-  <main class="app-shell">
-    <header class="topbar">
-      <div>
-        <div class="eyebrow">GRAMMATICA · A1</div>
-        <h1>Verbi riflessivi</h1>
-      </div>
-      <div class="progress-pill" id="progress">1 / 3</div>
-    </header>
+  <main class="app">
+    <div class="topbar">
+      <div class="eyebrow">Grammatica · A1</div>
+      <div class="progress-pill" id="progressPill">1 / 3</div>
+    </div>
 
-    <section class="card" id="verbCard">
+    <h1>Verbi riflessivi</h1>
+    <p class="subtitle">Сначала смотришь спряжение, затем переводишь фразу без подсказки.</p>
+
+    <section class="card verb-card">
       <div class="verb-head">
         <div>
-          <div class="verb">svegliarsi</div>
-          <div class="translation">просыпаться</div>
+          <div class="verb-title" id="verbTitle">svegliarsi</div>
+          <div class="verb-translation" id="verbTranslation">просыпаться</div>
         </div>
-        <span class="badge">Presente</span>
+        <div class="tense">Presente</div>
       </div>
+
       <div class="conjugation" id="conjugation"></div>
-      <div class="pronouns">mi · ti · si · ci · vi · si</div>
+      <div class="hint"><b>Запомни:</b> mi · ti · si · ci · vi · si</div>
     </section>
 
-    <section class="card practice-card">
-      <div class="eyebrow">ПЕРЕВЕДИ НА ИТАЛЬЯНСКИЙ</div>
+    <section class="card exercise">
+      <div class="kicker">Переведи на итальянский</div>
       <p class="prompt" id="prompt">Я просыпаюсь каждый день в семь.</p>
 
-      <label for="answer" class="sr-only">Ответ</label>
-      <textarea id="answer" rows="3" placeholder="Напиши ответ по-итальянски…" autocomplete="off" autocapitalize="sentences"></textarea>
+      <textarea id="answer" placeholder="Напиши ответ по-итальянски…" autocomplete="off" autocapitalize="sentences"></textarea>
       <button class="primary" id="checkBtn">Проверить</button>
 
-      <div class="feedback hidden" id="feedback"></div>
-      <div class="actions hidden" id="actions">
+      <div class="feedback" id="feedback">
+        <div class="feedback-title" id="feedbackTitle"></div>
+        <div class="answer-line" id="answerLine"></div>
+        <small id="feedbackText"></small>
+      </div>
+
+      <div class="actions" id="actions">
         <button class="secondary" id="sameVerbBtn">Ещё с этим глаголом</button>
-        <button class="secondary" id="prevVerbBtn">← Повторить предыдущий</button>
-        <button class="primary" id="newVerbBtn">Новый глагол →</button>
+        <button class="secondary" id="newVerbBtn">Новый глагол →</button>
+      </div>
+
+      <div class="footer-nav">
+        <button class="prev" id="prevBtn">← Повторить предыдущий</button>
+        <div class="counter" id="exerciseCounter">Упражнение 1</div>
       </div>
     </section>
   </main>
-  <script src="app.js"></script>
+
+  <script>
+    const tg = window.Telegram?.WebApp;
+    if (tg) {
+      tg.ready();
+      tg.expand();
+      try { tg.setHeaderColor('#f5f1e8'); tg.setBackgroundColor('#f5f1e8'); } catch(e) {}
+    }
+
+    const verbs = [
+      {
+        name:'svegliarsi', ru:'просыпаться', forms:[
+          ['io','mi sveglio'],['tu','ti svegli'],['lui / lei','si sveglia'],['noi','ci svegliamo'],['voi','vi svegliate'],['loro','si svegliano']
+        ],
+        exercises:[
+          {ru:'Я просыпаюсь каждый день в семь.', accepted:['mi sveglio ogni giorno alle sette','ogni giorno mi sveglio alle sette','io mi sveglio ogni giorno alle sette']},
+          {ru:'Мы просыпаемся рано по будням.', accepted:['ci svegliamo presto nei giorni feriali','noi ci svegliamo presto nei giorni feriali','ci svegliamo presto durante la settimana']},
+          {ru:'Ты просыпаешься поздно в воскресенье.', accepted:['ti svegli tardi la domenica','tu ti svegli tardi la domenica']}
+        ]
+      },
+      {
+        name:'alzarsi', ru:'вставать', forms:[
+          ['io','mi alzo'],['tu','ti alzi'],['lui / lei','si alza'],['noi','ci alziamo'],['voi','vi alzate'],['loro','si alzano']
+        ],
+        exercises:[
+          {ru:'Я встаю в восемь.', accepted:['mi alzo alle otto','io mi alzo alle otto']},
+          {ru:'Они встают очень рано.', accepted:['si alzano molto presto','loro si alzano molto presto']}
+        ]
+      },
+      {
+        name:'lavarsi', ru:'умываться / мыться', forms:[
+          ['io','mi lavo'],['tu','ti lavi'],['lui / lei','si lava'],['noi','ci laviamo'],['voi','vi lavate'],['loro','si lavano']
+        ],
+        exercises:[
+          {ru:'Я умываюсь утром.', accepted:['mi lavo la mattina','io mi lavo la mattina']},
+          {ru:'Вы моетесь после тренировки.', accepted:['vi lavate dopo l\'allenamento','voi vi lavate dopo l\'allenamento']}
+        ]
+      }
+    ];
+
+    let verbIndex = 0;
+    let exerciseIndex = 0;
+    let previousVerbIndex = 0;
+
+    const el = id => document.getElementById(id);
+
+    function normalize(s){
+      return s.toLowerCase().trim().replace(/[.!?;,]/g,'').replace(/\s+/g,' ');
+    }
+
+    function render(){
+      const v = verbs[verbIndex];
+      const ex = v.exercises[exerciseIndex % v.exercises.length];
+      el('progressPill').textContent = `${verbIndex+1} / ${verbs.length}`;
+      el('verbTitle').textContent = v.name;
+      el('verbTranslation').textContent = v.ru;
+      el('prompt').textContent = ex.ru;
+      el('exerciseCounter').textContent = `Упражнение ${exerciseIndex+1}`;
+      el('conjugation').innerHTML = v.forms.map(([p,f]) => `<div class="row"><div class="cell person">${p}</div><div class="cell form">${f}</div></div>`).join('');
+      el('answer').value='';
+      el('feedback').className='feedback';
+      el('actions').className='actions';
+      el('checkBtn').style.display='block';
+    }
+
+    function analyze(){
+      const v = verbs[verbIndex];
+      const ex = v.exercises[exerciseIndex % v.exercises.length];
+      const user = normalize(el('answer').value);
+      if(!user){
+        el('feedback').className='feedback show almost';
+        el('feedbackTitle').textContent='Напиши ответ';
+        el('answerLine').textContent='';
+        el('feedbackText').textContent='Сначала введи фразу по-итальянски.';
+        return;
+      }
+      const accepted = ex.accepted.map(normalize);
+      const correct = accepted.includes(user);
+      const expected = ex.accepted[0];
+
+      if(correct){
+        el('feedback').className='feedback show good';
+        el('feedbackTitle').textContent='✓ Отлично';
+        el('answerLine').textContent=expected+'.';
+        el('feedbackText').textContent='Форма возвратного глагола выбрана правильно.';
+      } else {
+        const pronouns=['mi','ti','si','ci','vi'];
+        const hasPronoun=pronouns.some(p => user.includes(p+' '));
+        el('feedback').className='feedback show '+(hasPronoun?'almost':'bad');
+        el('feedbackTitle').textContent=hasPronoun?'△ Почти':'✕ Давай разберём';
+        el('answerLine').textContent='Правильный вариант: '+expected+'.';
+        el('feedbackText').textContent = hasPronoun
+          ? 'Возвратное местоимение есть, но форма глагола или порядок слов отличаются от естественного варианта.'
+          : 'У возвратного глагола здесь нужно местоимение mi / ti / si / ci / vi перед формой глагола.';
+      }
+      el('actions').className='actions show';
+      el('checkBtn').style.display='none';
+    }
+
+    el('checkBtn').addEventListener('click', analyze);
+    el('sameVerbBtn').addEventListener('click',()=>{ exerciseIndex=(exerciseIndex+1)%verbs[verbIndex].exercises.length; render(); });
+    el('newVerbBtn').addEventListener('click',()=>{ previousVerbIndex=verbIndex; verbIndex=(verbIndex+1)%verbs.length; exerciseIndex=0; render(); });
+    el('prevBtn').addEventListener('click',()=>{ const cur=verbIndex; verbIndex=previousVerbIndex; previousVerbIndex=cur; exerciseIndex=0; render(); });
+    el('answer').addEventListener('keydown',(e)=>{ if((e.metaKey||e.ctrlKey)&&e.key==='Enter') analyze(); });
+
+    render();
+  </script>
 </body>
 </html>
