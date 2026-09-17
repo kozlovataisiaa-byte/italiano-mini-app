@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Italiano</title>
+<meta name="theme-color" content="#eef1f6" />
+<script src="https://telegram.org/js/telegram-web-app.js">
+));return buenoPdfBlobUrl;}
+
+
+document.querySelectorAll('.tool-card[href]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(!href || href.startsWith('./')) return; // local PDF: let browser open normally
+    try{
+      if(window.Telegram && Telegram.WebApp && typeof Telegram.WebApp.openLink==='function'){
+        e.preventDefault();
+        Telegram.WebApp.openLink(a.href);
+      }
+    }catch(err){}
+  });
+});
+
+</script>
+<style>
+:root{
+  --bg:#eef1f6; --ink:#121417; --muted:#7f8794; --card:#f8f9fb; --line:#dfe4eb;
+  --black:#18191b; --blue:#cbd8f0; --blue2:#dbe5f6; --yellow:#f7e79a; --mint:#dcebdc;
+  --lav:#e6def8; --pink:#f2d9df; --white:#fff; --shadow:0 10px 26px rgba(21,27,36,.06);
+  --r:26px; --r2:20px;
+}
+*{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif} body{min-height:100vh}
+button,input,textarea{font:inherit}.app{max-width:720px;margin:0 auto;padding:18px 14px calc(100px + env(safe-area-inset-bottom))}.screen{display:none}.screen.active{display:block}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.brand{display:flex;align-items:center;gap:11px}.wave{font-size:30px;line-height:1}.brand b{font-size:22px}.brand small{display:block;color:var(--muted);margin-top:2px}.head-actions{display:flex;gap:10px}.circle{width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.78);display:grid;place-items:center;font-size:20px}.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#d7dbe2,#f6f7f9);border:1px solid #fff;display:grid;place-items:center;color:#8d95a1;font-size:20px}
+.hello{color:var(--muted);margin:6px 0 4px}.hero-title{font-size:50px;line-height:.95;letter-spacing:-.055em;margin:0 0 12px;max-width:360px}.hero-sub{font-size:18px;color:#737b88;line-height:1.35;margin:0 0 18px;max-width:420px}
+.word-card{padding:12px 10px 28px;text-align:center;margin:4px auto 18px;max-width:520px}.word-card .section-label{margin-bottom:12px}.section-label{font-size:13px;color:#596476;margin-bottom:10px}.word-main{font-size:64px;line-height:1;font-weight:760;letter-spacing:-.05em}.pron{color:#697487;margin:7px 0 14px}.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0 16px}.chip{background:#fff;padding:9px 13px;border-radius:999px;font-size:14px;box-shadow:0 5px 16px rgba(21,27,36,.05)}.example{font-family:Georgia,serif;font-style:italic;font-size:20px;line-height:1.3;margin-top:12px}.example-ru{color:#6e7888;font-size:14px;margin-top:5px}.day-actions{display:flex;gap:10px;justify-content:center;margin-top:16px}.speak,.know-day{width:42px;height:42px;border:0;border-radius:50%;display:grid;place-items:center;font-size:19px}.speak{margin:0;background:#1d2740;color:#fff}.know-day{background:#fff;color:#1d2740;border:1px solid #dce1e8}.know-day.known{background:#dcebdc;border-color:#cbdcc9}
+.progress{background:var(--yellow);border-radius:28px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin-bottom:24px}.progress b{font-size:26px;display:block;margin-top:4px}.big-num{font-size:52px;line-height:1;font-weight:400}.progress small{color:#665f49}.bar{height:8px;background:rgba(0,0,0,.09);border-radius:999px;overflow:hidden;margin-top:12px}.bar span{display:block;height:100%;width:18%;background:#5d6e89;border-radius:999px}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin:18px 2px 10px}.section-head h2{font-size:28px;letter-spacing:-.035em;margin:0}.section-head span{color:#758092;font-size:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tile{border:0;border-radius:26px;padding:18px;text-align:left;min-height:138px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow)}.tile.blue{background:var(--blue2)}.tile.mint{background:var(--mint)}.tile.white{background:#f8f9fb}.tile.lav{background:var(--lav)}.tile.pink{background:var(--pink)}.tile .icon{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.5);display:grid;place-items:center;font-size:22px}.tile b{font-size:20px}.tile small{color:#6f7888;line-height:1.3}.arrow{align-self:flex-end;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.7);display:grid;place-items:center;font-size:20px}
+.goal{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin-top:12px}.goal-card,.quote{border-radius:26px;padding:18px;background:#f8f9fb;box-shadow:var(--shadow)}.quote{background:#edf2fb;font-family:Georgia,serif;font-style:italic;font-size:20px}.quote small{display:block;font-family:Inter,sans-serif;font-style:normal;color:#7b8492;margin-top:8px;font-size:14px}
+.bottom-nav{position:fixed;left:50%;transform:translateX(-50%);bottom:10px;width:min(calc(100% - 22px),690px);background:var(--black);border-radius:28px;padding:8px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;z-index:20;box-shadow:0 14px 30px rgba(0,0,0,.18)}.navbtn{border:0;background:transparent;color:#d9dce1;border-radius:22px;padding:10px 4px;font-size:12px;display:flex;flex-direction:column;align-items:center;gap:5px}.navbtn span{font-size:20px}.navbtn.active{background:#fff;color:#111}
+.backrow{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.back{border:0;background:#fff;border-radius:50%;width:42px;height:42px;font-size:20px}.page-title{font-size:38px;line-height:1;letter-spacing:-.045em;margin:4px 0 8px}.page-sub{color:var(--muted);margin:0 0 18px}
+.list{display:grid;gap:10px}.verb-item,.word-item{background:#f8f9fb;border-radius:20px;padding:15px 16px;display:flex;justify-content:space-between;align-items:center;border:1px solid #e3e7ec}.verb-item b,.word-item b{font-size:18px}.verb-item small,.word-item small{color:var(--muted);display:block;margin-top:3px}.verb-actions{display:flex;gap:8px;align-items:center}.verb-item button,.word-item button{border:0;background:#111;color:#fff;border-radius:999px;padding:10px 14px}.verb-check{width:42px;height:42px;padding:0!important;background:#fff!important;color:#111!important;border:1px solid #dce1e8!important;font-size:18px}.verb-check.done{background:#dcebdc!important;border-color:#cbdcc9!important}.search{width:100%;border:0;background:#fff;border-radius:18px;padding:15px 16px;margin-bottom:12px;outline:none}.form-card{background:#f8f9fb;border-radius:24px;padding:18px;margin-bottom:14px}.field{width:100%;border:1px solid #dde2e9;background:#fff;border-radius:16px;padding:13px 14px;margin-top:9px;outline:none}.primary{width:100%;border:0;background:#1d2740;color:#fff;border-radius:16px;padding:14px 16px;font-weight:750;margin-top:12px}.upload{margin-top:12px}.upload label{display:inline-block;background:#e9edf3;border-radius:14px;padding:11px 13px;font-size:14px}.upload input{display:none}.thumb{width:54px;height:54px;border-radius:14px;background:#e8ebef;object-fit:cover;margin-right:12px}.word-line{display:flex;align-items:center}.tabs{display:flex;gap:8px;margin-bottom:14px}.tabs button{border:0;border-radius:999px;padding:10px 13px;background:#fff}.tabs button.active{background:#111;color:#fff}
+.swipe-stack{display:grid;gap:12px}.swipe-card{position:relative;background:#f8f9fb;border:1px solid #e3e7ec;border-radius:22px;padding:18px;touch-action:pan-y;user-select:none;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;overflow:hidden}.swipe-card.selected{border-color:#9db7d7;background:#edf4fb;box-shadow:0 8px 22px rgba(61,86,116,.08)}.swipe-card .swipe-hint{display:flex;justify-content:space-between;color:#8a93a1;font-size:12px;margin-top:13px}.swipe-card .selected-badge{display:none;margin-top:10px;font-size:12px;font-weight:700;color:#496782}.swipe-card.selected .selected-badge{display:block}.study-selection{position:sticky;bottom:92px;background:rgba(238,241,246,.94);backdrop-filter:blur(12px);padding:12px 0 4px;z-index:10}.study-selection .primary:disabled{opacity:.4}.study-meta{text-align:center;color:#6e7888;font-size:13px;margin-bottom:8px}.trainer-card{background:#f8f9fb;border-radius:24px;padding:18px;margin-bottom:14px}.conj{display:grid;grid-template-columns:1fr 1.3fr;margin-top:14px;border-top:1px solid #e1e5ea}.conj div{padding:10px 2px;border-bottom:1px solid #e1e5ea}.conj .p{color:#7e8795}.prompt{font-size:24px;line-height:1.25;font-weight:650}.feedback{margin-top:12px;padding:14px;border-radius:16px;background:#edf2fb;display:none}.feedback.show{display:block}.mode-tabs{display:flex;gap:8px;overflow:auto;padding:2px 0 12px;scrollbar-width:none}.mode-tabs::-webkit-scrollbar{display:none}.mode-tab{white-space:nowrap;border:0;border-radius:999px;background:#fff;padding:10px 13px}.mode-tab.active{background:#1d2740;color:#fff}.choice-grid{display:grid;gap:10px;margin-top:12px}.choice-btn{border:1px solid #dfe4eb;background:#fff;border-radius:16px;padding:14px;text-align:left}.choice-btn.correct{background:#d9ecff;border-color:#9ec9f5}.choice-btn.wrong{background:#e5e7eb;border-color:#cfd4da}.word-bank{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.word-chip{border:0;background:#fff;border-radius:999px;padding:10px 13px;box-shadow:0 4px 12px rgba(0,0,0,.05)}.word-chip.used{opacity:.35}.built-answer{min-height:54px;border:1px dashed #cbd2dc;border-radius:16px;padding:12px;margin-top:12px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.match-col{display:grid;gap:8px}.match-btn{border:1px solid #dfe4eb;background:#fff;border-radius:14px;padding:12px}.match-btn.selected{outline:2px solid #1d2740}.match-btn.matched{background:#e3efe2;border-color:#bed4ba;color:#4f6750}
+.home-topline{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin:26px 0 14px}.home-topline h1{font-size:38px;line-height:1;letter-spacing:-.05em;margin:0}.success-widget{background:#fff;border:1px solid #d9d9d9;border-radius:18px;padding:11px 15px;min-width:138px;text-align:center;position:relative;z-index:30}.success-widget small{display:block;font-size:11px;color:#6d6346;margin-bottom:2px}.success-widget b{font-size:24px;line-height:1;display:block}.success-widget span{display:block;font-size:11px;color:#6d6346;margin-top:3px}.learned-summary{display:none}
+@media(max-width:480px){.home-topline h1{font-size:27px}.success-widget{min-width:138px;padding:11px 12px}.hero-title{font-size:43px}.grid{grid-template-columns:1fr 1fr}.goal{grid-template-columns:1fr}.word-main{font-size:50px}.tile{min-height:132px;padding:16px}.section-head h2{font-size:25px}}
+
+.parole-head{display:flex;gap:14px;justify-content:space-between;align-items:flex-start;margin-bottom:12px}.parole-head .page-title{margin-bottom:6px}.add-own-btn{border:0;background:#fff;border-radius:999px;padding:11px 14px;font-weight:700;white-space:nowrap}.parole-stack-wrap{display:flex;justify-content:center;min-height:430px}.swipe-stack{width:min(100%,390px);position:relative;display:block;min-height:420px}.swipe-card{position:absolute;inset:0;aspect-ratio:1/1;min-height:0;background:#f8f9fb;border:1px solid #e3e7ec;border-radius:30px;padding:28px;touch-action:none;user-select:none;transition:transform .22s ease,opacity .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;box-shadow:var(--shadow)}.swipe-card:nth-child(1){z-index:3}.swipe-card:nth-child(2){transform:translateY(8px) scale(.97);z-index:2;opacity:.75}.swipe-card:nth-child(3){transform:translateY(16px) scale(.94);z-index:1;opacity:.5}.swipe-card .word-big{font-size:42px;line-height:1.05;font-weight:780;letter-spacing:-.04em}.swipe-card .word-ru{font-size:20px;color:#5f6978;margin-top:10px}.swipe-card .word-meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}.swipe-card .word-meta span{background:#fff;border-radius:999px;padding:8px 12px;font-size:13px}.swipe-card .swipe-hint{position:absolute;left:22px;right:22px;bottom:20px;display:flex;justify-content:space-between;color:#8a93a1;font-size:12px}.swipe-card.selected{border-color:#9db7d7;background:#edf4fb}.swipe-card .selected-badge{display:none;position:absolute;top:20px;left:20px;font-size:12px;font-weight:800;color:#496782;background:#fff;border-radius:999px;padding:8px 10px}.swipe-card.selected .selected-badge{display:block}.know-card-btn{position:absolute;top:18px;right:18px;border:1px solid #111;border-radius:999px;background:#fff;color:#111;padding:9px 13px;font-size:13px;font-weight:800;z-index:8;box-shadow:none;transition:background .16s ease,color .16s ease,transform .16s ease}.know-card-btn:active{background:#111;color:#fff;transform:scale(.96)}.undo-known-btn{position:absolute;top:18px;left:18px;border:1px solid #d7d7d7;border-radius:999px;background:#fff;color:#111;padding:9px 13px;font-size:13px;font-weight:800;z-index:8;box-shadow:none;transition:background .16s ease,transform .16s ease}.undo-known-btn:active{background:#d9d9d9;transform:scale(.96)}@media(max-width:430px){.parole-head{display:block}.add-own-btn{margin-top:8px}.parole-stack-wrap{min-height:390px}.swipe-stack{min-height:380px}.swipe-card{padding:22px}.swipe-card .word-big{font-size:36px}}
+
+/* Monochrome mode */
+:root{--bg:#f4f4f4;--ink:#111;--muted:#6f6f6f;--card:#fff;--line:#dedede;--black:#111;--blue:#fff;--blue2:#fff;--yellow:#fff;--mint:#fff;--lav:#fff;--pink:#fff;--white:#fff;--shadow:0 8px 22px rgba(0,0,0,.05)}
+body{background:#f4f4f4}
+.tile,.goal-card,.quote,.trainer-card,.form-card,.verb-item,.word-item,.swipe-card,.feedback,.success-widget,.study-selection{background:#fff!important;color:#111!important}
+.tile,.goal-card,.quote,.trainer-card,.form-card,.verb-item,.word-item,.swipe-card,.feedback{border:1px solid #dedede!important;box-shadow:none!important}
+.tile .icon,.arrow,.chip,.word-meta span,.circle,.back,.add-own-btn,.tabs button,.mode-tab,.choice-btn,.match-btn,.word-chip,.upload label{background:#fff!important;color:#111!important;border:1px solid #dedede!important;box-shadow:none!important}
+.primary,.navbtn.active,.mode-tab.active,.tabs button.active{background:#111!important;color:#fff!important}
+.bottom-nav{background:#111!important}
+.know-day.known,.verb-check.done,.know-card-btn.known,.choice-btn.correct,.match-btn.matched,.swipe-card.selected{background:#111!important;color:#fff!important;border-color:#111!important}
+.choice-btn.wrong{background:#e5e5e5!important;color:#111!important}
+.bar{background:#e5e5e5!important}.bar span{background:#111!important}
+.success-widget{border:1px solid #dedede;cursor:pointer;overflow:visible}
+.success-widget.expanded{padding-bottom:14px}
+.learned-drawer{display:none;position:absolute;top:calc(100% + 8px);right:0;width:min(320px,82vw);max-height:280px;overflow:auto;text-align:left;overscroll-behavior:contain;background:#fff;border:1px solid #d9d9d9;border-radius:18px;padding:10px 12px;box-shadow:0 16px 40px rgba(0,0,0,.14);z-index:999}
+.success-widget.expanded .learned-drawer{display:block}
+.learned-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:9px 2px;border-bottom:1px solid #ececec;font-size:13px}
+.learned-row b{font-size:13px}.learned-row span{font-size:13px;color:#666;margin:0;text-align:right}
+.success-widget .drawer-hint{font-size:10px;color:#777;margin-top:5px}
+
+.know-card-btn:active{background:#111!important;color:#fff!important}.undo-known-btn:active{background:#d9d9d9!important;color:#111!important}
+
+.learned-row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 30px;align-items:center;gap:8px}.unlearn-btn{width:26px;height:26px;border-radius:50%;border:1px solid #cfcfcf;background:#fff;color:#111;display:grid;place-items:center;font-size:16px;line-height:1;padding:0;cursor:pointer}.unlearn-btn:active{background:#e5e5e5}.built-answer{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;min-height:54px;align-items:center}.built-letter{min-width:34px;height:38px;border:1px solid #111;border-radius:10px;background:#fff;color:#111;font-weight:800;font-size:17px;cursor:pointer}.built-letter:active{background:#e5e5e5}
+
+.parole-tabs{display:flex;gap:8px;margin:14px 0 18px}
+.parole-tab{flex:1;border:1px solid #d8d8d8;background:#fff;color:#111;border-radius:999px;padding:11px 14px;font-weight:800;font-size:14px}
+.parole-tab.active{background:#111!important;color:#fff!important;border-color:#111!important}
+.parole-panel{display:none}.parole-panel.active{display:block}
+.dictionary-toolbar{display:flex;gap:8px;margin:10px 0 16px}
+.dictionary-search{width:100%;border:1px solid #d8d8d8;background:#fff;border-radius:14px;padding:12px 14px;font:inherit}
+.dict-group{margin:20px 0}.dict-group h3{font-size:14px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;color:#777}
+.dict-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #ececec}
+.dict-word{font-weight:800}.dict-ru{font-size:13px;color:#666;margin-top:3px}.dict-meta{font-size:12px;color:#777;text-align:right}
+.fly-word{position:fixed;z-index:99999;pointer-events:none;font-weight:900;font-size:24px;color:#fff;background:#111;border:2px solid #111;border-radius:999px;padding:10px 16px;box-shadow:0 14px 30px rgba(0,0,0,.22);white-space:nowrap;transform-origin:center;will-change:transform,opacity}
+.know-day.flash{background:#111!important;color:#fff!important;border-color:#111!important;transform:scale(.94)}
+.success-widget.catch{animation:catchWord .42s ease}
+@keyframes catchWord{0%{transform:scale(1)}35%{transform:scale(1.09)}70%{transform:scale(.98)}100%{transform:scale(1)}}
+.fly-word.flying{animation:flyIntoLearned 1.25s cubic-bezier(.16,.7,.18,1) forwards}
+@keyframes flyIntoLearned{0%{opacity:1;transform:translate(0,0) scale(1)}38%{opacity:1;transform:translate(var(--fly-x-mid),var(--fly-y-mid)) scale(.92)}72%{opacity:.92;transform:translate(calc(var(--fly-x) * .82),calc(var(--fly-y) * .82)) scale(.58)}100%{opacity:0;transform:translate(var(--fly-x),var(--fly-y)) scale(.16)}}
+
+
+#verbList{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+#verbList .verb-card{aspect-ratio:1/1;background:#fff;border:1px solid #dedede;border-radius:18px;padding:11px 9px;display:flex;flex-direction:column;justify-content:space-between;min-width:0;box-shadow:none}
+#verbList .verb-card-main{min-width:0;text-align:left}
+#verbList .verb-card b{display:block;font-size:13px;line-height:1.12;letter-spacing:-.02em;overflow-wrap:anywhere}
+#verbList .verb-card small{display:block;color:#747474;font-size:10px;line-height:1.2;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#verbList .verb-card-actions{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}
+#verbList .verb-card-actions button{border:1px solid #111;border-radius:999px;padding:7px 3px;font-size:9px;font-weight:800;background:#fff;color:#111;min-width:0}
+#verbList .verb-card-actions button[data-verb]{background:#111;color:#fff}
+#verbList .verb-card-actions .verb-known.done{background:#111;color:#fff;border-color:#111}
+@media(max-width:360px){
+  #verbList{gap:6px}
+  #verbList .verb-card{padding:9px 7px;border-radius:15px}
+  #verbList .verb-card b{font-size:11px}
+  #verbList .verb-card small{font-size:9px}
+  #verbList .verb-card-actions button{font-size:8px;padding:6px 2px}
+}
+
+
+.textbook-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+.textbook-card{background:#fff;border:1px solid #dedede;border-radius:20px;padding:16px;text-align:left;min-height:130px;display:flex;flex-direction:column;justify-content:space-between}
+.textbook-card b{font-size:18px;line-height:1.08;letter-spacing:-.02em}
+.textbook-card small{display:block;color:#777;margin-top:7px;line-height:1.3}
+.textbook-card .tb-arrow{font-size:20px;margin-top:14px}
+.textbook-section{margin-top:24px}
+.textbook-section h2{font-size:22px;margin:0 0 10px}
+.topic-list{display:grid;gap:8px}
+.topic-item{background:#fff;border:1px solid #dedede;border-radius:16px;overflow:hidden}
+.topic-head{width:100%;border:0;background:#fff;color:#111;padding:14px 15px;display:flex;align-items:center;justify-content:space-between;text-align:left;font-weight:800;font-size:15px}
+.topic-body{display:none;padding:0 15px 15px;color:#555;font-size:14px;line-height:1.5}
+.topic-item.open .topic-body{display:block}
+.topic-head span:last-child{transition:transform .18s ease;font-size:20px;font-weight:400}
+.topic-item.open .topic-head span:last-child{transform:rotate(45deg)}
+.pinned-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;border:1px solid #111;border-radius:999px;padding:6px 9px;margin-bottom:9px}
+
+
+/* Verb typography refinement */
+#verbList .verb-card b{font-size:16px!important;line-height:1.08!important}
+#verbList .verb-card small{font-size:10px!important}
+#trainer .conj{font-size:13px}
+#trainer .conj div{padding:8px 2px}
+#trainer .conj b{font-size:13px;font-weight:750}
+#trainer .conj .p{font-size:12px}
+
+
+/* Section card spacing */
+.tile b,.textbook-card b{display:block}
+.tile small,.textbook-card small{display:block;margin-top:9px}
+
+/* Word trainer exercise tabs */
+.word-stage-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:2px 0 14px}
+.word-stage-tab{border:1px solid #d8d8d8;background:#fff;color:#111;border-radius:999px;padding:10px 6px;font-size:12px;font-weight:800}
+.word-stage-tab.active{background:#111!important;color:#fff!important;border-color:#111!important}
+
+/* Softer success feedback */
+.feedback.correct-feedback{
+  display:block;
+  background:#fff!important;
+  border:1px solid #111!important;
+  color:#111!important;
+  opacity:0;
+  transform:translateY(6px);
+  animation:successFadeIn .42s ease forwards;
+}
+.feedback.correct-feedback b{color:#111!important}
+@keyframes successFadeIn{
+  from{opacity:0;transform:translateY(6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+
+.feedback.wrong-feedback{
+  display:block;
+  background:#f3f3f3!important;
+  border:1px solid #d6d6d6!important;
+  color:#111!important;
+  opacity:0;
+  transform:translateY(8px);
+  animation:wrongFadeIn .38s ease forwards;
+}
+.feedback.wrong-feedback b{display:block;color:#111!important;margin-bottom:5px}
+.feedback.wrong-feedback .why{color:#555;line-height:1.45}
+@keyframes wrongFadeIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+
+/* Correct answer feedback: black animated card */
+.feedback.correct-feedback{
+  display:block!important;
+  background:#111!important;
+  border:1px solid #111!important;
+  color:#fff!important;
+  border-radius:16px;
+  padding:13px 15px;
+  opacity:0;
+  transform:translateY(10px) scale(.98);
+  animation:correctCardIn .5s cubic-bezier(.2,.75,.25,1) forwards!important;
+}
+.feedback.correct-feedback b{color:#fff!important}
+@keyframes correctCardIn{
+  0%{opacity:0;transform:translateY(10px) scale(.98)}
+  65%{opacity:1;transform:translateY(-1px) scale(1.01)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
+
+
+.textbook-topic .page-sub{max-width:620px}
+.lesson-block{background:#fff;border:1px solid #dedede;border-radius:20px;padding:16px;margin:14px 0}
+.lesson-block h2{font-size:21px;margin:0 0 10px}
+.lesson-block h3{font-size:16px;margin:16px 0 8px}
+.lesson-block p{margin:8px 0;line-height:1.55;color:#333}
+.lesson-note{border-left:3px solid #111;padding:10px 12px;margin:12px 0;background:#f7f7f7;border-radius:0 12px 12px 0;line-height:1.5}
+.lesson-list{margin:8px 0 0;padding-left:20px}
+.lesson-list li{margin:7px 0;line-height:1.45}
+.table-wrap{overflow-x:auto;margin:12px 0;border:1px solid #ddd;border-radius:14px;background:#fff}
+.lesson-table{width:100%;border-collapse:collapse;min-width:520px;font-size:13px}
+.lesson-table th,.lesson-table td{border-bottom:1px solid #e6e6e6;border-right:1px solid #ececec;padding:10px 9px;text-align:left;vertical-align:top}
+.lesson-table th{background:#f3f3f3;font-weight:800}
+.lesson-table tr:last-child td{border-bottom:0}
+.lesson-table th:last-child,.lesson-table td:last-child{border-right:0}
+.lesson-table.compact{min-width:420px}
+.lesson-examples{display:grid;gap:7px;margin-top:10px}
+.lesson-example{padding:10px 12px;background:#f7f7f7;border-radius:12px;line-height:1.4}
+.textbook-grid .textbook-card{cursor:pointer}
+
+
+.textbook-group{margin:24px 0 28px}
+.textbook-group-head{margin:0 0 12px}
+.textbook-group-head h2{font-size:26px;line-height:1.05;letter-spacing:-.035em;margin:0 0 6px}
+.textbook-group-head p{margin:0;color:#777;font-size:14px;line-height:1.45}
+.textbook-subgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.textbook-subgrid .textbook-card{min-height:118px}
+@media(max-width:380px){.textbook-subgrid{grid-template-columns:1fr 1fr;gap:8px}.textbook-group-head h2{font-size:23px}}
+
+
+/* Balanced reflexive verb cards */
+#verbList{gap:10px}
+#verbList .verb-card{
+  aspect-ratio:auto!important;
+  min-height:150px;
+  padding:13px 10px 10px!important;
+  border-radius:18px;
+}
+#verbList .verb-card-main{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  flex:1;
+  text-align:left;
+}
+#verbList .verb-card b{
+  font-size:15px!important;
+  line-height:1.13!important;
+  font-weight:850;
+  letter-spacing:-.025em;
+  overflow-wrap:normal!important;
+  word-break:normal;
+  hyphens:none;
+}
+#verbList .verb-card small{
+  font-size:10.5px!important;
+  line-height:1.28!important;
+  margin-top:8px!important;
+  color:#707070;
+  -webkit-line-clamp:3!important;
+}
+#verbList .verb-card-actions{
+  gap:6px!important;
+  margin-top:12px!important;
+}
+#verbList .verb-card-actions button{
+  font-size:9px!important;
+  line-height:1;
+  padding:8px 2px!important;
+}
+@media(max-width:360px){
+ #verbList{gap:7px}
+ #verbList .verb-card{min-height:145px;padding:11px 8px 9px!important}
+ #verbList .verb-card b{font-size:13.5px!important}
+ #verbList .verb-card small{font-size:9.5px!important;margin-top:7px!important}
+ #verbList .verb-card-actions{gap:4px!important;margin-top:9px!important}
+ #verbList .verb-card-actions button{font-size:8px!important;padding:7px 1px!important}
+}
+
+
+.lesson-practice-btn{
+  width:100%;
+  border:0;
+  background:#111;
+  color:#fff;
+  border-radius:16px;
+  padding:14px 16px;
+  font-weight:800;
+  margin-top:14px;
+  font-size:14px;
+}
+.lesson-practice-btn:active{transform:scale(.99)}
+
+
+#verbList .verb-card b{font-size:17px!important;line-height:1.08!important}
+@media(max-width:360px){#verbList .verb-card b{font-size:15.5px!important}}
+
+
+#verbList .verb-title-row{display:flex;align-items:flex-start;gap:6px}
+#verbList .verb-emoji{font-size:16px;line-height:1.05;flex:0 0 auto;margin-top:1px}
+
+
+.hint-btn{width:100%;border:1px solid #111;background:#fff;color:#111;border-radius:16px;padding:12px 14px;font-weight:800;margin-top:10px}
+.hint-box{display:none;margin-top:10px;padding:13px 14px;border-radius:16px;background:#f4f4f4;border:1px solid #dedede;line-height:1.5;font-size:13px}
+.hint-box.show{display:block;animation:hintIn .28s ease both}
+.hint-box b{display:block;margin-bottom:5px}
+@keyframes hintIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+
+
+.translate-topline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px}
+.learned-sentences-btn{border:1px solid #111;background:#fff;color:#111;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:800;white-space:nowrap}
+.level-pill{display:inline-flex;align-items:center;border:1px solid #d8d8d8;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800;margin:2px 0 8px}
+.sentence-learned-overlay{position:fixed;z-index:80;left:50%;top:50%;transform:translate(-50%,-48%) scale(.98);width:min(calc(100% - 34px),620px);max-height:68vh;background:#fff;border:1px solid #d7d7d7;border-radius:24px;box-shadow:0 24px 70px rgba(0,0,0,.22);padding:16px;opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease}
+.sentence-learned-overlay.show{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.sentence-overlay-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.sentence-overlay-head b{font-size:18px}
+.sentence-overlay-list{overflow:auto;max-height:52vh;padding-right:3px}
+.learned-sentence-row{padding:12px 0;border-bottom:1px solid #ececec}
+.learned-sentence-row:last-child{border-bottom:0}
+.learned-sentence-row .ru{font-weight:800;line-height:1.35}
+.learned-sentence-row .it{font-size:13px;color:#666;margin-top:4px;line-height:1.4}
+.level-up-note{margin-top:10px;padding:11px 13px;border:1px solid #111;border-radius:14px;background:#111;color:#fff;font-size:13px;font-weight:800;animation:hintIn .3s ease both}
+
+
+.sound-btn{width:32px;height:32px;border:1px solid #d8d8d8;border-radius:50%;background:#fff;color:#111;display:inline-grid;place-items:center;font-size:14px;line-height:1;padding:0;flex:0 0 auto;transition:transform .16s ease,background .16s ease}
+.sound-btn:active,.sound-btn.speaking{background:#111!important;color:#fff!important;transform:scale(.94)}
+.word-sound{position:absolute;right:18px;top:62px;z-index:9}
+.dict-wordline{display:flex;align-items:center;gap:8px}
+.dict-row .sound-btn{width:30px;height:30px;font-size:13px}
+.verb-title-row .sound-btn{width:28px;height:28px;font-size:12px;margin-left:auto}
+#trainerVerb{display:flex;align-items:center;gap:10px}
+#trainerVerb .title-sound{width:36px;height:36px;font-size:15px}
+.conj-sound{width:26px!important;height:26px!important;font-size:11px!important;margin-left:6px;vertical-align:middle}
+
+
+.tools-section{margin-top:24px}
+.tools-section .section-head{margin-bottom:10px}
+.tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.tool-card{text-decoration:none;box-sizing:border-box;border:1px solid #dedede;background:#fff;color:#111;border-radius:18px;padding:14px 10px;min-height:118px;text-align:left;display:flex;flex-direction:column;justify-content:space-between}
+.tool-card .tool-icon{font-size:24px}
+.tool-card b{display:block;font-size:14px;line-height:1.15;margin-top:9px}
+.tool-card small{display:block;color:#777;font-size:10px;line-height:1.25;margin-top:6px}
+.tool-card .tool-arrow{margin-top:12px;font-size:18px}
+to{transform:translateY(0);opacity:1}}
+@media(max-width:380px){.tools-grid{gap:7px}.tool-card{padding:12px 8px;min-height:110px}.tool-card b{font-size:12px}.tool-card small{font-size:9px}}
+
+</style>
+</head>
+<body>
+<div class="app">
+<section id="home" class="screen active">
+  <div class="header"><div class="brand"><div class="wave">👋</div><div><b>Italiano</b><small>Учимся вместе</small></div></div><div class="head-actions"><button class="circle">⌕</button><div class="avatar">◯</div></div></div>
+  <div class="home-topline"><h1>Слово дня</h1><div class="success-widget" id="learnedWidget" role="button" aria-expanded="false"><small>Выучено</small><b id="learnedCountTop">0</b><span>слов</span><div class="learned-drawer" id="learnedDrawer"></div></div></div>
+  <div class="word-card"><div class="word-main" id="dayWord">sole</div><div class="pron" id="dayPron">[ˈsoːle] · солнце</div><div class="chips"><span class="chip" id="dayGender">m · муж. род</span><span class="chip" id="dayArticle">il sole</span></div><div class="example" id="dayExample">“Il sole rende tutto più bello.”</div><div class="example-ru" id="dayExampleRu">Солнце делает всё прекраснее.</div><div class="day-actions"><button class="speak" id="nextWord" aria-label="Другое слово">↻</button><button class="know-day" id="knowDayWord" aria-label="Я знаю это слово">✓</button></div></div>
+  <div class="learned-summary"><div class="big-num" id="learnedCount">0</div><small>выученных слов</small><div class="bar"><span id="progressBar"></span></div></div>
+  <div class="section-head"><h2>Разделы обучения</h2><span>Все разделы →</span></div>
+  <div class="grid">
+    <button class="tile white" data-open="textbook"><div class="icon">▦</div><div><b>Учебник</b><small>Все темы и объяснения итальянского</small></div><div class="arrow">→</div></button>
+    <button class="tile blue" data-open="verbs"><div class="icon">↻</div><div><b>🪞 Verbi riflessivi</b><small>Возвратные глаголы · 55 глаголов</small></div><div class="arrow">→</div></button>
+    <button class="tile mint" data-open="words"><div class="icon">▤</div><div><b>Parole</b><small>Слова · базовый список</small></div><div class="arrow">→</div></button>
+  </div>
+  <div class="tools-section">
+    <div class="section-head"><h2>Инструменты</h2><span>Под рукой</span></div>
+    <div class="tools-grid">
+      <a class="tool-card" href="https://docs.google.com/document/d/1MzDIWrq66yL57IudAFwG38quZh-XNqD3hDXTTZCo0OI/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+        <div><div class="tool-icon">📁</div><b>Мои материалы</b><small>Google Drive · Tasiya</small></div><div class="tool-arrow">→</div>
+      </a>
+      <a class="tool-card" href="https://context.reverso.net/translation/italian-russian/" target="_blank" rel="noopener noreferrer">
+        <div><div class="tool-icon">🔎</div><b>Reverso</b><small>Итальянский ↔ русский</small></div><div class="tool-arrow">→</div>
+      </a>
+      <a class="tool-card" href="./Italiano_Contemporaneo_Esercizi_(1).pdf" target="_blank" rel="noopener noreferrer">
+        <div><div class="tool-icon">📕</div><b>Tommaso Bueno</b><small>Практикум по грамматике</small></div><div class="tool-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="textbook" class="screen">
+  <div class="backrow"><button class="back" data-open="home">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Учебник</h1>
+  <p class="page-sub">Темы из твоего раздела «Tabelle», собранные по смысловым блокам.</p>
+
+  <div class="textbook-group">
+    <div class="textbook-group-head">
+      <h2>🗣️ Глаголы</h2>
+      <p>Спряжения, неправильные формы и возвратные конструкции.</p>
+    </div>
+    <div class="textbook-subgrid">
+      <button class="textbook-card" data-open="lesson-riflessivi"><div><b>🪞 Verbi riflessivi</b><small>Возвратные глаголы</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-andare-venire"><div><b>🚶 Andare e venire</b><small>Идти и приходить</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-fare"><div><b>🛠️ Verbo FARE</b><small>Глагол делать</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-avere"><div><b>🎒 Verbo AVERE</b><small>Глагол иметь</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-essere"><div><b>✨ Verbo ESSERE</b><small>Глагол быть</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-are"><div><b>🔤 Verbo -ARE</b><small>Глаголы на -ARE</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-ere"><div><b>🔡 Verbo -ERE</b><small>Глаголы на -ERE</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-ire"><div><b>🔠 Verbo -IRE</b><small>Глаголы на -IRE</small></div><div class="tb-arrow">→</div></button>
+    </div>
+  </div>
+
+  <div class="textbook-group">
+    <div class="textbook-group-head">
+      <h2>🧩 Артикли и предлоги</h2>
+      <p>Как оформлять существительные и выбирать предлог в зависимости от места и направления.</p>
+    </div>
+    <div class="textbook-subgrid">
+      <button class="textbook-card" data-open="lesson-articoli"><div><b>🏷️ Articoli determinativi</b><small>Определённые артикли</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-prep"><div><b>📍 Preposizioni di luogo</b><small>Предлоги места</small></div><div class="tb-arrow">→</div></button>
+    </div>
+  </div>
+
+  <div class="textbook-group">
+    <div class="textbook-group-head">
+      <h2>📝 Существительные и прилагательные</h2>
+      <p>Род, согласование и слова, которые уточняют существительное.</p>
+    </div>
+    <div class="textbook-subgrid">
+      <button class="textbook-card" data-open="lesson-genere"><div><b>⚖️ Genere</b><small>Женский и мужской род</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-possessivi"><div><b>🔑 Aggettivi possessivi</b><small>Притяжательные прилагательные</small></div><div class="tb-arrow">→</div></button>
+      <button class="textbook-card" data-open="lesson-dimostrativi"><div><b>👉 Aggettivi dimostrativi</b><small>Указательные прилагательные</small></div><div class="tb-arrow">→</div></button>
+    </div>
+  </div>
+</section>
+
+<section id="lesson-prep" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Preposizioni di luogo</h1><p class="page-sub">Предлоги места</p>
+  <div class="lesson-block"><h2>Vado / sono</h2>
+    <div class="table-wrap"><table class="lesson-table"><tr><th>Предлог</th><th>Примеры из таблицы</th></tr>
+    <tr><td><b>in</b></td><td>Italia, Spagna, Sicilia; centro, ufficio, montagna, banca, città, farmacia, vacanza, autobus, macchina, treno</td></tr>
+    <tr><td><b>a</b></td><td>Roma, Parigi, Londra; casa, letto, teatro, cena, scuola, una festa, studiare, fare spese, ballare, lavorare, piede</td></tr>
+    <tr><td><b>al</b></td><td>cinema, mare, bar, ristorante, primo piano</td></tr>
+    <tr><td><b>da</b></td><td>un amico, Antonio</td></tr></table></div>
+  </div>
+  <div class="lesson-block"><h2>Vengo</h2>
+    <div class="table-wrap"><table class="lesson-table compact"><tr><th>Предлог</th><th>Примеры</th></tr>
+    <tr><td>in</td><td>Italia, Germania, aereo, treno</td></tr>
+    <tr><td>a</td><td>Pisa, casa, teatro</td></tr>
+    <tr><td>da</td><td>Siena, Napoli, Nicola, te, medico; Torino, Perugia</td></tr></table></div>
+  </div>
+  <div class="lesson-block"><h2>Parto</h2>
+    <div class="table-wrap"><table class="lesson-table compact"><tr><th>Предлог</th><th>Примеры</th></tr>
+    <tr><td>per</td><td>Barcellona, l’Italia, la Francia, gli Stati Uniti</td></tr>
+    <tr><td>in</td><td>aereo, macchina, treno, autobus, ottobre</td></tr></table></div>
+  </div>
+</section>
+
+<section id="lesson-riflessivi" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Verbi riflessivi</h1><p class="page-sub">Возвратные глаголы</p>
+  <div class="lesson-block"><p>Возвратный глагол = человек делает действие с самим собой. Окончание <b>-si</b> в словаре — сигнал, что глагол употребляется с возвратным местоимением.</p>
+    <div class="lesson-examples"><div class="lesson-example">lavare — мыть кого-то / что-то → <b>lavarsi</b> — мыться</div><div class="lesson-example">vestire — одевать кого-то → <b>vestirsi</b> — одеваться</div><div class="lesson-example">pettinare — причесывать кого-то → <b>pettinarsi</b> — причесываться</div></div>
+  </div>
+  <div class="lesson-block"><h2>Спряжение</h2><div class="table-wrap"><table class="lesson-table">
+    <tr><th></th><th>Местоимение</th><th>Vedersi</th><th>Alzarsi</th><th>Vestirsi</th></tr>
+    <tr><td>IO</td><td>MI</td><td>mi vedo</td><td>mi alzo</td><td>mi vesto</td></tr>
+    <tr><td>TU</td><td>TI</td><td>ti vedi</td><td>ti alzi</td><td>ti vesti</td></tr>
+    <tr><td>LUI/LEI</td><td>SI</td><td>si vede</td><td>si alza</td><td>si veste</td></tr>
+    <tr><td>NOI</td><td>CI</td><td>ci vediamo</td><td>ci alziamo</td><td>ci vestiamo</td></tr>
+    <tr><td>VOI</td><td>VI</td><td>vi vedete</td><td>vi alzate</td><td>vi vestite</td></tr>
+    <tr><td>LORO</td><td>SI</td><td>si vedono</td><td>si alzano</td><td>si vestono</td></tr>
+  </table></div>
+    <button class="lesson-practice-btn" data-open="verbs">Нажми, чтобы потренировать возвратные глаголы</button>
+  </div>
+</section>
+
+<section id="lesson-possessivi" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Aggettivi possessivi</h1><p class="page-sub">Притяжательные прилагательные</p>
+  <div class="lesson-block"><div class="table-wrap"><table class="lesson-table">
+    <tr><th></th><th>Maschile singolare</th><th>Femminile singolare</th><th>Maschile plurale</th><th>Femminile plurale</th></tr>
+    <tr><td>IO</td><td>mio</td><td>mia</td><td>miei</td><td>mie</td></tr>
+    <tr><td>TU</td><td>tuo</td><td>tua</td><td>tuoi</td><td>tue</td></tr>
+    <tr><td>LUI/LEI</td><td>suo</td><td>sua</td><td>suoi</td><td>sue</td></tr>
+    <tr><td>NOI</td><td>nostro</td><td>nostra</td><td>nostri</td><td>nostre</td></tr>
+    <tr><td>VOI</td><td>vostro</td><td>vostra</td><td>vostri</td><td>vostre</td></tr>
+    <tr><td>LORO</td><td>loro</td><td>loro</td><td>loro</td><td>loro</td></tr>
+  </table></div>
+  <div class="lesson-note"><b>ATTENZIONE:</b> перед названиями членов семьи в единственном числе артикль не ставится: <b>mio fratello, mio zio, mia madre</b>.</div>
+  <ul class="lesson-list"><li>Если есть уточнение: <b>la mia sorella minore</b>.</li><li>Если используется уменьшительно-ласкательная форма: <b>la mia nonnina</b>.</li></ul>
+  </div>
+</section>
+
+<section id="lesson-dimostrativi" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Aggettivi dimostrativi</h1><p class="page-sub">Указательные прилагательные</p>
+  <div class="lesson-block"><h2>QUESTO — этот</h2><div class="table-wrap"><table class="lesson-table compact">
+    <tr><th></th><th>Singolare</th><th>Plurale</th></tr>
+    <tr><td>Maschile</td><td>questo libro</td><td>questi libri</td></tr>
+    <tr><td>Femminile</td><td>questa casa</td><td>queste case</td></tr>
+  </table></div></div>
+  <div class="lesson-block"><h2>QUELLO — тот</h2><div class="table-wrap"><table class="lesson-table">
+    <tr><th></th><th>Singolare</th><th>Plurale</th></tr>
+    <tr><td>Femminile</td><td>la penna → quella penna<br>l’amica → quell’amica</td><td>le penne → quelle penne<br>le amiche → quelle amiche</td></tr>
+    <tr><td>Maschile</td><td>il libro → quel libro<br>lo zaino → quello zaino<br>l’amico → quell’amico</td><td>i libri → quei libri<br>gli zaini → quegli zaini<br>gli amici → quegli amici</td></tr>
+  </table></div><div class="lesson-note">В документе отмечено: <b>quello</b> используется по модели определённого артикля.</div></div>
+</section>
+
+<section id="lesson-andare-venire" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Andare e venire</h1><p class="page-sub">Глаголы идти и приходить</p>
+  <div class="lesson-block"><div class="table-wrap"><table class="lesson-table compact">
+    <tr><th></th><th>ANDARE</th><th>VENIRE</th></tr>
+    <tr><td>IO</td><td>vado</td><td>vengo</td></tr><tr><td>TU</td><td>vai</td><td>vieni</td></tr>
+    <tr><td>LUI/LEI</td><td>va</td><td>viene</td></tr><tr><td>NOI</td><td>andiamo</td><td>veniamo</td></tr>
+    <tr><td>VOI</td><td>andate</td><td>venite</td></tr><tr><td>LORO</td><td>vanno</td><td>vengono</td></tr>
+  </table></div>
+  <div class="lesson-examples"><div class="lesson-example">Vado al cinema. — Я иду в кино.</div><div class="lesson-example">Vai a scuola? — Ты идёшь в школу?</div><div class="lesson-example">Marco va in ufficio. — Марко едет в офис.</div><div class="lesson-example">Noi andiamo in Italia. — Мы едем в Италию.</div><div class="lesson-example">Vieni a casa mia? — Придёшь ко мне домой?</div><div class="lesson-example">Domani vengo da te. — Завтра я приду к тебе.</div><div class="lesson-example">Venite tutti alla festa! — Приходите все на праздник!</div><div class="lesson-example">Chi viene con noi? — Кто идёт с нами?</div></div>
+  </div>
+</section>
+
+<section id="lesson-fare" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Verbo FARE</h1><p class="page-sub">Глагол делать</p>
+  <div class="lesson-block"><h2>Используется</h2><ul class="lesson-list"><li>В прямом значении: <b>Che fai?</b> / <b>Adesso faccio il caffè.</b></li><li>В вопросах: <b>Che lavoro fai?</b>, <b>Che fai nella vita?</b>, <b>Che fai per vivere?</b>, <b>Che tempo fa?</b></li></ul>
+  <div class="table-wrap"><table class="lesson-table compact"><tr><th></th><th>FARE</th></tr>
+  <tr><td>IO</td><td>faccio</td></tr><tr><td>TU</td><td>fai</td></tr><tr><td>LUI/LEI</td><td>fa</td></tr><tr><td>NOI</td><td>facciamo</td></tr><tr><td>VOI</td><td>fate</td></tr><tr><td>LORO</td><td>fanno</td></tr></table></div>
+  <h3>Устойчивые выражения</h3><div class="lesson-examples"><div class="lesson-example">fare la spesa — ходить за продуктами</div><div class="lesson-example">fare la doccia — принимать душ</div><div class="lesson-example">fare colazione — завтракать</div><div class="lesson-example">fare tardi — задерживаться</div><div class="lesson-example">fare una passeggiata — прогуливаться</div><div class="lesson-example">fare la fila — стоять в очереди</div><div class="lesson-example">avere da fare — иметь дела</div><div class="lesson-example">fare una domanda — задать вопрос</div><div class="lesson-example">fare due passi — пройтись</div><div class="lesson-example">fare quattro chiacchiere — поболтать</div><div class="lesson-example">fare schifo — быть отвратительным</div></div>
+  </div>
+</section>
+
+<section id="lesson-avere" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Verbo AVERE</h1><p class="page-sub">Глагол иметь</p>
+  <div class="lesson-block"><h2>Используется</h2><ul class="lesson-list"><li>В значении владения: <b>ho una sorella</b>, <b>Maria ha un gatto</b>.</li><li>Для возраста: <b>ho 30 anni</b>, <b>quanti anni hai?</b></li></ul>
+  <div class="table-wrap"><table class="lesson-table compact"><tr><th></th><th>AVERE</th></tr>
+  <tr><td>IO</td><td>ho</td></tr><tr><td>TU</td><td>hai</td></tr><tr><td>LUI/LEI</td><td>ha</td></tr><tr><td>NOI</td><td>abbiamo</td></tr><tr><td>VOI</td><td>avete</td></tr><tr><td>LORO</td><td>hanno</td></tr></table></div>
+  <div class="lesson-examples"><div class="lesson-example">avere fame — хотеть есть</div><div class="lesson-example">avere sete — хотеть пить</div><div class="lesson-example">avere caldo — жарко</div><div class="lesson-example">avere freddo — холодно</div><div class="lesson-example">avere sonno — хотеть спать</div></div></div>
+</section>
+
+<section id="lesson-essere" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Verbo ESSERE</h1><p class="page-sub">Глагол быть</p>
+  <div class="lesson-block"><h2>Используется</h2><ul class="lesson-list"><li>Местонахождение: <b>sono a casa</b>.</li><li>Профессия: <b>sono insegnante</b>.</li><li>Социальный статус: <b>sono sposato/a</b>, <b>sono fidanzato/a</b>.</li></ul>
+  <div class="table-wrap"><table class="lesson-table compact"><tr><th></th><th>ESSERE</th></tr>
+  <tr><td>IO</td><td>sono</td></tr><tr><td>TU</td><td>sei</td></tr><tr><td>LUI/LEI</td><td>è</td></tr><tr><td>NOI</td><td>siamo</td></tr><tr><td>VOI</td><td>siete</td></tr><tr><td>LORO</td><td>sono</td></tr></table></div>
+  <div class="lesson-examples"><div class="lesson-example">sono stanco/a — я устал/а</div><div class="lesson-example">sono forte — я сильный/ая</div><div class="lesson-example">sono pigro/a — я ленивый/ая</div><div class="lesson-example">sono felice — я счастливый/ая</div></div></div>
+</section>
+
+<section id="lesson-are" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Verbo -ARE</h1><p class="page-sub">Регулярные глаголы на -ARE</p>
+  <div class="lesson-block"><div class="table-wrap"><table class="lesson-table"><tr><th></th><th>Основа</th><th>Окончание</th><th>ABITARE</th></tr>
+    <tr><td>IO</td><td>abit-</td><td>-o</td><td>abito</td></tr><tr><td>TU</td><td>abit-</td><td>-i</td><td>abiti</td></tr>
+    <tr><td>LUI/LEI</td><td>abit-</td><td>-a</td><td>abita</td></tr><tr><td>NOI</td><td>abit-</td><td>-iamo</td><td>abitiamo</td></tr>
+    <tr><td>VOI</td><td>abit-</td><td>-ate</td><td>abitate</td></tr><tr><td>LORO</td><td>abit-</td><td>-ano</td><td>abitano</td></tr></table></div>
+  <div class="lesson-note">Глаголы на <b>-care, -gare</b>: cercare → tu cerchi / noi cerchiamo; pagare → tu paghi / noi paghiamo.</div>
+  <div class="lesson-note">Глаголы на <b>-iare</b>: mangiare → io mangio / tu mangi / noi mangiamo.</div></div>
+</section>
+
+<section id="lesson-ere" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Verbo -ERE</h1><p class="page-sub">Регулярные глаголы на -ERE</p>
+  <div class="lesson-block"><div class="table-wrap"><table class="lesson-table"><tr><th></th><th>Основа</th><th>Окончание</th><th>SCRIVERE</th></tr>
+    <tr><td>IO</td><td>scriv-</td><td>-o</td><td>scrivo</td></tr><tr><td>TU</td><td>scriv-</td><td>-i</td><td>scrivi</td></tr>
+    <tr><td>LUI/LEI</td><td>scriv-</td><td>-e</td><td>scrive</td></tr><tr><td>NOI</td><td>scriv-</td><td>-iamo</td><td>scriviamo</td></tr>
+    <tr><td>VOI</td><td>scriv-</td><td>-ete</td><td>scrivete</td></tr><tr><td>LORO</td><td>scriv-</td><td>-ono</td><td>scrivono</td></tr></table></div>
+  <div class="lesson-note">В документе отдельно отмечены окончания <b>-cere, -gere, -scere</b>: leggere → io leggo / tu leggi; conoscere → io conosco / tu conosci.</div></div>
+</section>
+
+<section id="lesson-ire" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Verbo -IRE</h1><p class="page-sub">Регулярные глаголы на -IRE</p>
+  <div class="lesson-block"><div class="table-wrap"><table class="lesson-table"><tr><th></th><th>Основа</th><th>Окончание</th><th>PARTIRE</th></tr>
+    <tr><td>IO</td><td>part-</td><td>-o</td><td>parto</td></tr><tr><td>TU</td><td>part-</td><td>-i</td><td>parti</td></tr>
+    <tr><td>LUI/LEI</td><td>part-</td><td>-e</td><td>parte</td></tr><tr><td>NOI</td><td>part-</td><td>-iamo</td><td>partiamo</td></tr>
+    <tr><td>VOI</td><td>part-</td><td>-ite</td><td>partite</td></tr><tr><td>LORO</td><td>part-</td><td>-ono</td><td>partono</td></tr></table></div>
+  <h2>Глаголы с -isc-</h2><div class="table-wrap"><table class="lesson-table compact"><tr><th></th><th>FINIRE</th></tr>
+    <tr><td>IO</td><td>finisco</td></tr><tr><td>TU</td><td>finisci</td></tr><tr><td>LUI/LEI</td><td>finisce</td></tr><tr><td>NOI</td><td>finiamo</td></tr><tr><td>VOI</td><td>finite</td></tr><tr><td>LORO</td><td>finiscono</td></tr></table></div>
+  <div class="lesson-note">В документе также перечислены: capire, restituire, preferire, costruire, spedire, pulire.</div></div>
+</section>
+
+<section id="lesson-articoli" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Articoli determinativi</h1><p class="page-sub">Определённые артикли</p>
+  <div class="lesson-block"><div class="table-wrap"><table class="lesson-table">
+    <tr><th>Род</th><th>Начинается с</th><th>Ед. число</th><th>Мн. число</th></tr>
+    <tr><td rowspan="3">Мужской</td><td>s + consonante, z, ps, pn, gn, x, y</td><td>LO</td><td>GLI</td></tr>
+    <tr><td>гласная: a, e, i, o, u</td><td>L’</td><td>GLI</td></tr>
+    <tr><td>остальные согласные</td><td>IL</td><td>I</td></tr>
+    <tr><td rowspan="2">Женский</td><td>гласная: a, e, i, o, u</td><td>L’</td><td>LE</td></tr>
+    <tr><td>остальные согласные</td><td>LA</td><td>LE</td></tr>
+  </table></div></div>
+</section>
+
+<section id="lesson-genere" class="screen textbook-topic">
+  <div class="backrow"><button class="back" data-open="textbook">←</button><div>Учебник</div></div>
+  <h1 class="page-title">Genere femminile e maschile</h1><p class="page-sub">Женский и мужской род</p>
+  <div class="lesson-block"><div class="table-wrap"><table class="lesson-table compact">
+    <tr><th></th><th>Ед. число</th><th>Мн. число</th></tr>
+    <tr><td>Женский род</td><td>cas<b>a</b></td><td>cas<b>e</b></td></tr>
+    <tr><td>Мужской род</td><td>libr<b>o</b></td><td>libr<b>i</b></td></tr>
+    <tr><td>Женский и мужской род</td><td>chiav<b>e</b><br>pied<b>e</b></td><td>chiav<b>i</b><br>pied<b>i</b></td></tr>
+  </table></div></div>
+</section>
+
+<section id="verbs" class="screen"><div class="backrow"><button class="back" data-open="home">←</button><div>Grammatica · A1</div></div><h1 class="page-title">Verbi riflessivi</h1><p class="page-sub">Выбери глагол и начни практику.</p><input id="verbSearch" class="search" placeholder="Найти глагол…"><div id="verbList" class="list"></div></section>
+<section id="trainer" class="screen"><div class="backrow"><button class="back" data-open="verbs">←</button><div id="trainerCount"></div></div><h1 class="page-title" id="trainerVerb"></h1><p class="page-sub" id="trainerRu"></p><div class="trainer-card"><b>Presente</b><div class="conj" id="conj"></div></div><div class="mode-tabs"><button class="mode-tab active" data-mode="translate">Перевод</button><button class="mode-tab" data-mode="form">Форма</button><button class="mode-tab" data-mode="build">Собери фразу</button><button class="mode-tab" data-mode="match">Соедини</button></div><div class="trainer-card" id="exerciseCard"></div></section>
+<section id="words" class="screen"><div class="backrow"><button class="back" data-open="home">←</button><div>Parole</div></div>
+<div class="parole-tabs"><button class="parole-tab active" data-parole-tab="learn">Обучение</button><button class="parole-tab" data-parole-tab="dictionary">Словарь</button></div>
+<div class="parole-panel active" id="paroleLearn">
+<div class="parole-head"><div><h1 class="page-title">Выбери слова</h1><p class="page-sub">Свайп влево — беру. Вправо — пропускаю.</p></div><button class="add-own-btn" id="toggleAddWord">＋ Добавить свои слова</button></div>
+<div class="form-card" id="addWordForm" style="display:none"><b>Добавить слово</b><input class="field" id="newWord" placeholder="Итальянское слово"><input class="field" id="newTranslation" placeholder="Перевод"><input class="field" id="newArticle" placeholder="Артикль, например il"><select class="field" id="newGender"><option value="m">Мужской род</option><option value="f">Женский род</option></select><select class="field" id="newPos"><option value="noun">Существительное</option><option value="verb">Глагол</option><option value="adjective">Прилагательное</option><option value="adverb">Наречие</option><option value="other">Другое</option></select><div class="upload"><label for="newPhoto">＋ Прикрепить фото</label><input type="file" id="newPhoto" accept="image/*"></div><button class="primary" id="addWord">Добавить в базу</button></div>
+<div class="parole-stack-wrap"><div id="wordList" class="swipe-stack"></div></div><div class="study-selection" id="studySelection"><div class="study-meta" id="selectedWordsMeta">Выбрано: 0 из 5</div><button class="primary" id="studySelected" disabled>Учить выбранные слова</button></div>
+</div>
+<div class="parole-panel" id="paroleDictionary"><h1 class="page-title">Словарь</h1><p class="page-sub">Все слова по алфавиту и частям речи.</p><div class="dictionary-toolbar"><input id="dictionarySearch" class="dictionary-search" placeholder="Найти слово или перевод"></div><div id="dictionaryList"></div></div>
+</section>
+<section id="wordTrainer" class="screen"><div class="backrow"><button class="back" data-open="words">←</button><div id="wordTrainerCount">Parole</div></div><h1 class="page-title">Тренировка слов</h1><p class="page-sub" id="wordStageTitle">Этап 1 из 3 · Артикль</p><div class="word-stage-tabs"><button class="word-stage-tab active" data-word-stage="1">Артикль</button><button class="word-stage-tab" data-word-stage="2">Перевод</button><button class="word-stage-tab" data-word-stage="3">Слово</button></div><div class="trainer-card" id="wordExerciseCard"></div></section>
+</div>
+<nav class="bottom-nav"><button class="navbtn active" data-open="home"><span>⌂</span>Главная</button><button class="navbtn" data-open="words"><span>▤</span>Слова</button><button class="navbtn"><span>▥</span>Статистика</button><button class="navbtn"><span>◯</span>Профиль</button></nav>
+<script>
+document.addEventListener('click',e=>{
+  const head=e.target.closest('.topic-head');
+  if(head){head.closest('.topic-item').classList.toggle('open');}
+  const jump=e.target.closest('[data-jump]');
+  if(jump){const el=document.getElementById(jump.dataset.jump);if(el){el.scrollIntoView({behavior:'smooth',block:'start'});el.classList.add('open');}}
+});
+const tg=window.Telegram?.WebApp;if(tg){tg.ready();tg.expand();try{tg.setHeaderColor('#f4f4f4');tg.setBackgroundColor('#f4f4f4')}catch(e){}}
+const dayWords=[
+{w:'sole',pron:'[ˈsoːle]',ru:'солнце',g:'m · муж. род',a:'il sole',ex:'Il sole rende tutto più bello.',exru:'Солнце делает всё прекраснее.'},
+{w:'casa',pron:'[ˈkaːza]',ru:'дом',g:'f · жен. род',a:'la casa',ex:'La mia casa è vicino al centro.',exru:'Мой дом находится рядом с центром.'},
+{w:'tempo',pron:'[ˈtɛmpo]',ru:'время',g:'m · муж. род',a:'il tempo',ex:'Non ho molto tempo oggi.',exru:'Сегодня у меня не так много времени.'},
+{w:'vita',pron:'[ˈviːta]',ru:'жизнь',g:'f · жен. род',a:'la vita',ex:'La vita cambia velocemente.',exru:'Жизнь быстро меняется.'},
+{w:'strada',pron:'[ˈstraːda]',ru:'улица, дорога',g:'f · жен. род',a:'la strada',ex:'Questa strada porta al mare.',exru:'Эта дорога ведёт к морю.'},
+{w:'città',pron:'[tʃitˈta]',ru:'город',g:'f · жен. род',a:'la città',ex:'La città è molto vivace.',exru:'Город очень оживлённый.'},
+{w:'lavoro',pron:'[laˈvoːro]',ru:'работа',g:'m · муж. род',a:'il lavoro',ex:'Oggi ho molto lavoro.',exru:'Сегодня у меня много работы.'},
+{w:'famiglia',pron:'[faˈmiʎʎa]',ru:'семья',g:'f · жен. род',a:'la famiglia',ex:'La mia famiglia vive in Italia.',exru:'Моя семья живёт в Италии.'},
+{w:'amico',pron:'[aˈmiːko]',ru:'друг',g:'m · муж. род',a:"l'amico",ex:'Luca è un mio caro amico.',exru:'Лука — мой близкий друг.'},
+{w:'acqua',pron:'[ˈakkwa]',ru:'вода',g:'f · жен. род',a:"l'acqua",ex:'Vorrei un bicchiere d’acqua.',exru:'Я бы хотела стакан воды.'},
+{w:'pane',pron:'[ˈpaːne]',ru:'хлеб',g:'m · муж. род',a:'il pane',ex:'Compro il pane ogni mattina.',exru:'Я покупаю хлеб каждое утро.'},
+{w:'caffè',pron:'[kafˈfɛ]',ru:'кофе',g:'m · муж. род',a:'il caffè',ex:'Prendo un caffè, per favore.',exru:'Мне кофе, пожалуйста.'},
+{w:'macchina',pron:'[ˈmakkina]',ru:'машина',g:'f · жен. род',a:'la macchina',ex:'La macchina è davanti a casa.',exru:'Машина стоит перед домом.'},
+{w:'libro',pron:'[ˈliːbro]',ru:'книга',g:'m · муж. род',a:'il libro',ex:'Sto leggendo un libro interessante.',exru:'Я читаю интересную книгу.'},
+{w:'musica',pron:'[ˈmuːzika]',ru:'музыка',g:'f · жен. род',a:'la musica',ex:'Ascolto musica mentre lavoro.',exru:'Я слушаю музыку во время работы.'},
+{w:'mare',pron:'[ˈmaːre]',ru:'море',g:'m · муж. род',a:'il mare',ex:'Domani andiamo al mare.',exru:'Завтра мы едем к морю.'},
+{w:'sera',pron:'[ˈseːra]',ru:'вечер',g:'f · жен. род',a:'la sera',ex:'La sera studio italiano.',exru:'Вечером я учу итальянский.'},
+{w:'mattina',pron:'[matˈtiːna]',ru:'утро',g:'f · жен. род',a:'la mattina',ex:'La mattina bevo sempre il caffè.',exru:'Утром я всегда пью кофе.'},
+{w:'domanda',pron:'[doˈmanda]',ru:'вопрос',g:'f · жен. род',a:'la domanda',ex:'Ho una domanda importante.',exru:'У меня важный вопрос.'},
+{w:'risposta',pron:'[risˈpɔsta]',ru:'ответ',g:'f · жен. род',a:'la risposta',ex:'Non conosco la risposta.',exru:'Я не знаю ответа.'},
+{w:'viaggio',pron:'[viˈaddʒo]',ru:'путешествие',g:'m · муж. род',a:'il viaggio',ex:'Il viaggio è stato bellissimo.',exru:'Путешествие было прекрасным.'},
+{w:'stazione',pron:'[statˈtsjoːne]',ru:'вокзал, станция',g:'f · жен. род',a:'la stazione',ex:'La stazione è qui vicino.',exru:'Вокзал находится совсем рядом.'},
+{w:'ristorante',pron:'[ristoˈrante]',ru:'ресторан',g:'m · муж. род',a:'il ristorante',ex:'Conosco un buon ristorante.',exru:'Я знаю хороший ресторан.'},
+{w:'mercato',pron:'[merˈkaːto]',ru:'рынок',g:'m · муж. род',a:'il mercato',ex:'Il mercato apre presto.',exru:'Рынок открывается рано.'},
+{w:'chiave',pron:'[ˈkjaːve]',ru:'ключ',g:'f · жен. род',a:'la chiave',ex:'Non trovo la chiave.',exru:'Я не могу найти ключ.'},
+{w:'porta',pron:'[ˈpɔrta]',ru:'дверь',g:'f · жен. род',a:'la porta',ex:'Chiudi la porta, per favore.',exru:'Закрой дверь, пожалуйста.'},
+{w:'finestra',pron:'[fiˈnɛstra]',ru:'окно',g:'f · жен. род',a:'la finestra',ex:'Apro la finestra.',exru:'Я открываю окно.'},
+{w:'sedia',pron:'[ˈsɛːdja]',ru:'стул',g:'f · жен. род',a:'la sedia',ex:'La borsa è sulla sedia.',exru:'Сумка лежит на стуле.'},
+{w:'tavolo',pron:'[ˈtaːvolo]',ru:'стол',g:'m · муж. род',a:'il tavolo',ex:'Il libro è sul tavolo.',exru:'Книга лежит на столе.'},
+{w:'telefono',pron:'[teˈlɛːfono]',ru:'телефон',g:'m · муж. род',a:'il telefono',ex:'Il mio telefono è scarico.',exru:'Мой телефон разряжен.'}
+];
+const verbsRaw=`Abbronzarsi|загорать\nAbituarsi a|привыкнуть к\nAccontentarsi di|довольствоваться\nAddormentarsi|засыпать\nAllontanarsi|отдаляться\nAlzarsi|вставать\nAnnoiarsi|заскучать\nArrabbiarsi|злиться\nAspettarsi di|ожидать\nBattersi|сражаться\nBruciarsi|обжечься\nCambiarsi|переодеваться\nVantarsi di|хвастаться\nVestirsi|одеваться\nChiamarsi|называться\nChiedersi|спрашивать себя\nComportarsi|вести себя\nComprarsi|покупать себе\nCoricarsi|идти спать\nDecidersi a|решить\nDirsi|сказать себе\nDivertirsi|развлекаться\nDomandarsi|задаваться вопросом\nEsprimersi|выражаться\nFarsi i capelli|делать прическу\nFarsi il bagno|мыться\nFarsi la barba|бриться\nTruccarsi|краситься\nFarsi male|ушибиться\nFidanzarsi|обручиться\nGuardarsi|смотреть на себя\nLamentarsi|жаловаться\nLavarsi|умываться, мыться\nMettersi a|начинать что-то делать\nNascondersi|прятаться\nOccuparsi di|заботиться о\nPettinarsi|причесываться\nPreoccuparsi di|переживать\nPrepararsi a|готовиться к\nPresentarsi a|представляться кому-то\nRassegnarsi a|смириться\nTrovarsi|находиться где-то\nRendersi conto di|осознать что-то\nRicordarsi di|вспомнить о чем-то\nRiposarsi|отдыхать\nRompersi|сломать (руку)\nSbagliarsi|ошибиться\nSbrigarsi|поторопиться\nSedersi|садиться\nServirsi di|воспользоваться\nSorprendersi di|удивиться\nSpecializzarsi in|специализироваться\nSposarsi con|жениться\nSvegliarsi|просыпаться\nTagliarsi|порезаться`;
+const verbs=verbsRaw.split('\n').map((x,i)=>{const [name,ru]=x.split('|');return{name,ru,forms:makeForms(name),exercises:makeExercises(name,ru)}});
+function makeForms(name){const lower=name.toLowerCase();const key=lower.replace(/\s+(a|di|in|con).*$/,'');const specific={svegliarsi:['mi sveglio','ti svegli','si sveglia','ci svegliamo','vi svegliate','si svegliano'],alzarsi:['mi alzo','ti alzi','si alza','ci alziamo','vi alzate','si alzano'],lavarsi:['mi lavo','ti lavi','si lava','ci laviamo','vi lavate','si lavano'],vestirsi:['mi vesto','ti vesti','si veste','ci vestiamo','vi vestite','si vestono'],chiamarsi:['mi chiamo','ti chiami','si chiama','ci chiamiamo','vi chiamate','si chiamano'],sedersi:['mi siedo','ti siedi','si siede','ci sediamo','vi sedete','si siedono'],addormentarsi:['mi addormento','ti addormenti','si addormenta','ci addormentiamo','vi addormentate','si addormentano']};let f=specific[key];if(!f){let stem=key.replace(/arsi$/,'').replace(/ersi$/,'').replace(/irsi$/,'');if(key.endsWith('arsi'))f=[`mi ${stem}o`,`ti ${stem}i`,`si ${stem}a`,`ci ${stem}iamo`,`vi ${stem}ate`,`si ${stem}ano`];else if(key.endsWith('irsi'))f=[`mi ${stem}o`,`ti ${stem}i`,`si ${stem}e`,`ci ${stem}iamo`,`vi ${stem}ite`,`si ${stem}ono`];else f=[`mi ${stem}o`,`ti ${stem}i`,`si ${stem}e`,`ci ${stem}iamo`,`vi ${stem}ete`,`si ${stem}ono`]}return[['io',f[0]],['tu',f[1]],['lui/lei',f[2]],['noi',f[3]],['voi',f[4]],['loro',f[5]]]}
+function makeExercises(name,ru){
+ const bank={
+'svegliarsi':[
+['Я просыпаюсь каждый день в семь.','Mi sveglio ogni giorno alle sette.','mi sveglio — я просыпаюсь; ogni giorno — каждый день; alle sette — в семь'],
+['Мы просыпаемся рано в воскресенье.','Ci svegliamo presto la domenica.','ci svegliamo — мы просыпаемся; presto — рано; la domenica — в воскресенье'],
+['Она просыпается и пьёт кофе.','Si sveglia e beve il caffè.','si sveglia — она просыпается; e — и; beve — пьёт; il caffè — кофе']
+],
+'alzarsi':[
+['Я встаю в восемь.','Mi alzo alle otto.','mi alzo — я встаю; alle otto — в восемь'],
+['Мы встаём рано утром.','Ci alziamo presto la mattina.','ci alziamo — мы встаём; presto — рано; la mattina — утром'],
+['Он встаёт с кровати.','Si alza dal letto.','si alza — он встаёт; dal letto — с кровати']
+],
+'lavarsi':[
+['Я умываюсь утром.','Mi lavo la mattina.','mi lavo — я умываюсь; la mattina — утром'],
+['Она моет руки перед обедом.','Si lava le mani prima di pranzo.','si lava — она моет; le mani — руки; prima di — перед; pranzo — обед'],
+['Мы моемся после работы.','Ci laviamo dopo il lavoro.','ci laviamo — мы моемся; dopo — после; il lavoro — работа']
+],
+'vestirsi':[
+['Я одеваюсь быстро.','Mi vesto velocemente.','mi vesto — я одеваюсь; velocemente — быстро'],
+['Она одевается перед работой.','Si veste prima del lavoro.','si veste — она одевается; prima del lavoro — перед работой'],
+['Мы одеваемся и выходим.','Ci vestiamo e usciamo.','ci vestiamo — мы одеваемся; e — и; usciamo — выходим']
+],
+'chiamarsi':[
+['Меня зовут Анна.','Mi chiamo Anna.','mi chiamo — меня зовут; Anna — Анна'],
+['Как тебя зовут?','Come ti chiami?','come — как; ti chiami — тебя зовут'],
+['Его зовут Лука.','Si chiama Luca.','si chiama — его зовут; Luca — Лука']
+],
+'addormentarsi':[
+['Я засыпаю поздно.','Mi addormento tardi.','mi addormento — я засыпаю; tardi — поздно'],
+['Ребёнок засыпает быстро.','Il bambino si addormenta velocemente.','il bambino — ребёнок; si addormenta — засыпает; velocemente — быстро'],
+['Мы засыпаем после фильма.','Ci addormentiamo dopo il film.','ci addormentiamo — мы засыпаем; dopo — после; il film — фильм']
+],
+'sedersi':[
+['Я сажусь на стул.','Mi siedo sulla sedia.','mi siedo — я сажусь; sulla sedia — на стул'],
+['Мы садимся за стол.','Ci sediamo a tavola.','ci sediamo — мы садимся; a tavola — за стол'],
+['Она садится рядом со мной.','Si siede vicino a me.','si siede — она садится; vicino a me — рядом со мной']
+],
+'riposarsi':[
+['Я отдыхаю после работы.','Mi riposo dopo il lavoro.','mi riposo — я отдыхаю; dopo — после; il lavoro — работа'],
+['Мы отдыхаем дома.','Ci riposiamo a casa.','ci riposiamo — мы отдыхаем; a casa — дома'],
+['Он отдыхает немного.','Si riposa un po\'.','si riposa — он отдыхает; un po’ — немного']
+],
+'divertirsi':[
+['Я хорошо провожу время с друзьями.','Mi diverto con gli amici.','mi diverto — я развлекаюсь; con — с; gli amici — друзья'],
+['Мы веселимся на вечеринке.','Ci divertiamo alla festa.','ci divertiamo — мы веселимся; alla festa — на вечеринке'],
+['Они веселятся вместе.','Si divertono insieme.','si divertono — они веселятся; insieme — вместе']
+],
+'arrabbiarsi':[
+['Я злюсь редко.','Mi arrabbio raramente.','mi arrabbio — я злюсь; raramente — редко'],
+['Она злится на брата.','Si arrabbia con suo fratello.','si arrabbia — она злится; con — на/с; suo fratello — её брат'],
+['Мы не злимся.','Non ci arrabbiamo.','non — не; ci arrabbiamo — мы злимся']
+],
+'annoiarsi':[
+['Я скучаю дома.','Mi annoio a casa.','mi annoio — я скучаю; a casa — дома'],
+['Они скучают на уроке.','Si annoiano durante la lezione.','si annoiano — они скучают; durante — во время; la lezione — урок'],
+['Мы не скучаем вместе.','Non ci annoiamo insieme.','non — не; ci annoiamo — мы скучаем; insieme — вместе']
+],
+'cambiarsi':[
+['Я переодеваюсь после работы.','Mi cambio dopo il lavoro.','mi cambio — я переодеваюсь; dopo — после; il lavoro — работа'],
+['Она переодевается дома.','Si cambia a casa.','si cambia — она переодевается; a casa — дома'],
+['Мы быстро переодеваемся.','Ci cambiamo velocemente.','ci cambiamo — мы переодеваемся; velocemente — быстро']
+],
+'truccarsi':[
+['Она красится утром.','Si trucca la mattina.','si trucca — она красится; la mattina — утром'],
+['Я крашусь перед вечеринкой.','Mi trucco prima della festa.','mi trucco — я крашусь; prima della festa — перед вечеринкой'],
+['Они красятся вместе.','Si truccano insieme.','si truccano — они красятся; insieme — вместе']
+],
+'pettinarsi':[
+['Я причёсываюсь утром.','Mi pettino la mattina.','mi pettino — я причёсываюсь; la mattina — утром'],
+['Она причёсывается перед зеркалом.','Si pettina davanti allo specchio.','si pettina — она причёсывается; davanti allo specchio — перед зеркалом'],
+['Мы причёсываемся быстро.','Ci pettiniamo velocemente.','ci pettiniamo — мы причёсываемся; velocemente — быстро']
+],
+'preoccuparsi di':[
+['Я переживаю о работе.','Mi preoccupo del lavoro.','mi preoccupo — я переживаю; del lavoro — о работе'],
+['Она переживает о семье.','Si preoccupa della famiglia.','si preoccupa — она переживает; della famiglia — о семье'],
+['Не переживай обо мне.','Non ti preoccupare di me.','non — не; ti preoccupare — переживай; di me — обо мне']
+],
+'occuparsi di':[
+['Я занимаюсь домом.','Mi occupo della casa.','mi occupo — я занимаюсь; della casa — домом'],
+['Она заботится о ребёнке.','Si occupa del bambino.','si occupa — она заботится; del bambino — о ребёнке'],
+['Мы занимаемся этим сегодня.','Ce ne occupiamo oggi.','ce ne occupiamo — мы этим занимаемся; oggi — сегодня']
+],
+'ricordarsi di':[
+['Я помню о встрече.','Mi ricordo dell\'incontro.','mi ricordo — я помню; dell’incontro — о встрече'],
+['Она помнит купить хлеб.','Si ricorda di comprare il pane.','si ricorda — она помнит; di comprare — купить; il pane — хлеб'],
+['Мы помним этот день.','Ci ricordiamo di questo giorno.','ci ricordiamo — мы помним; di questo giorno — этот день']
+],
+'sbagliarsi':[
+['Я ошибаюсь редко.','Mi sbaglio raramente.','mi sbaglio — я ошибаюсь; raramente — редко'],
+['Ты ошибаешься.','Ti sbagli.','ti sbagli — ты ошибаешься'],
+['Мы не ошибаемся.','Non ci sbagliamo.','non — не; ci sbagliamo — мы ошибаемся']
+],
+'sbrigarsi':[
+['Я тороплюсь утром.','Mi sbrigo la mattina.','mi sbrigo — я тороплюсь; la mattina — утром'],
+['Поторопись, пожалуйста.','Sbrigati, per favore.','sbrigati — поторопись; per favore — пожалуйста'],
+['Мы торопимся на поезд.','Ci sbrighiamo per il treno.','ci sbrighiamo — мы торопимся; per il treno — на поезд']
+],
+'prepararsi a':[
+['Я готовлюсь к работе.','Mi preparo al lavoro.','mi preparo — я готовлюсь; al lavoro — к работе'],
+['Она готовится выйти.','Si prepara a uscire.','si prepara — она готовится; a uscire — выйти'],
+['Мы готовимся к поездке.','Ci prepariamo al viaggio.','ci prepariamo — мы готовимся; al viaggio — к поездке']
+],
+'presentarsi a':[
+['Я представляюсь группе.','Mi presento al gruppo.','mi presento — я представляюсь; al gruppo — группе'],
+['Она представляется учителю.','Si presenta all\'insegnante.','si presenta — она представляется; all’insegnante — учителю'],
+['Мы представляемся новым людям.','Ci presentiamo alle nuove persone.','ci presentiamo — мы представляемся; alle nuove persone — новым людям']
+],
+'guardarsi':[
+['Я смотрю на себя в зеркало.','Mi guardo allo specchio.','mi guardo — я смотрю на себя; allo specchio — в зеркало'],
+['Она смотрит на себя.','Si guarda.','si guarda — она смотрит на себя'],
+['Мы смотрим друг на друга.','Ci guardiamo.','ci guardiamo — мы смотрим друг на друга']
+],
+'nascondersi':[
+['Кот прячется под столом.','Il gatto si nasconde sotto il tavolo.','il gatto — кот; si nasconde — прячется; sotto il tavolo — под столом'],
+['Я прячусь за дверью.','Mi nascondo dietro la porta.','mi nascondo — я прячусь; dietro la porta — за дверью'],
+['Они прячутся дома.','Si nascondono a casa.','si nascondono — они прячутся; a casa — дома']
+],
+'sposarsi con':[
+['Она выходит замуж за Марко.','Si sposa con Marco.','si sposa — она выходит замуж; con Marco — за Марко'],
+['Мы женимся летом.','Ci sposiamo in estate.','ci sposiamo — мы женимся; in estate — летом'],
+['Они женятся в Италии.','Si sposano in Italia.','si sposano — они женятся; in Italia — в Италии']
+],
+'fidanzarsi':[
+['Они обручаются летом.','Si fidanzano in estate.','si fidanzano — они обручаются; in estate — летом'],
+['Она обручается с Лукой.','Si fidanza con Luca.','si fidanza — она обручается; con Luca — с Лукой'],
+['Мы помолвлены.','Ci fidanzamo.','ci fidanzamo — мы обручаемся']
+],
+'abbronzarsi':[
+['Я загораю на пляже.','Mi abbronzo in spiaggia.','mi abbronzo — я загораю; in spiaggia — на пляже'],
+['Она загорает у моря.','Si abbronza al mare.','si abbronza — она загорает; al mare — у моря'],
+['Мы загораем летом.','Ci abbronziamo in estate.','ci abbronziamo — мы загораем; in estate — летом']
+],
+'rompersi':[
+['Я сломал руку.','Mi sono rotto il braccio.','mi sono rotto — я сломал; il braccio — руку'],
+['Она сломала ногу.','Si è rotta la gamba.','si è rotta — она сломала; la gamba — ногу'],
+['Он сломал палец.','Si è rotto un dito.','si è rotto — он сломал; un dito — палец']
+],
+'tagliarsi':[
+['Я порезал палец.','Mi sono tagliato un dito.','mi sono tagliato — я порезал; un dito — палец'],
+['Она порезала руку.','Si è tagliata la mano.','si è tagliata — она порезала; la mano — руку'],
+['Не порежься.','Non tagliarti.','non — не; tagliarti — порежься']
+],
+'farsi male':[
+['Я ушиб руку.','Mi sono fatto male alla mano.','mi sono fatto male — я ушибся; alla mano — руку'],
+['Она ушибла ногу.','Si è fatta male alla gamba.','si è fatta male — она ушиблась; alla gamba — ногу'],
+['Ты ушибся?','Ti sei fatto male?','ti sei fatto male — ты ушибся']
+],
+'lamentarsi':[
+['Он жалуется на работу.','Si lamenta del lavoro.','si lamenta — он жалуется; del lavoro — на работу'],
+['Я не жалуюсь.','Non mi lamento.','non — не; mi lamento — я жалуюсь'],
+['Они часто жалуются.','Si lamentano spesso.','si lamentano — они жалуются; spesso — часто']
+],
+'esprimersi':[
+['Я выражаюсь просто.','Mi esprimo in modo semplice.','mi esprimo — я выражаюсь; in modo semplice — просто'],
+['Она хорошо выражается по-итальянски.','Si esprime bene in italiano.','si esprime — она выражается; bene — хорошо; in italiano — по-итальянски'],
+['Мы выражаемся ясно.','Ci esprimiamo chiaramente.','ci esprimiamo — мы выражаемся; chiaramente — ясно']
+],
+'trovarsi':[
+['Я нахожусь дома.','Mi trovo a casa.','mi trovo — я нахожусь; a casa — дома'],
+['Ресторан находится в центре.','Il ristorante si trova in centro.','il ristorante — ресторан; si trova — находится; in centro — в центре'],
+['Мы находимся в Италии.','Ci troviamo in Italia.','ci troviamo — мы находимся; in Italia — в Италии']
+],
+'rendersi conto di':[
+['Я понимаю свою ошибку.','Mi rendo conto del mio errore.','mi rendo conto — я осознаю; del mio errore — свою ошибку'],
+['Она понимает проблему.','Si rende conto del problema.','si rende conto — она осознаёт; del problema — проблему'],
+['Мы понимаем это сейчас.','Ce ne rendiamo conto adesso.','ce ne rendiamo conto — мы это осознаём; adesso — сейчас']
+],
+'sorprendersi di':[
+['Я удивляюсь этой новости.','Mi sorprendo di questa notizia.','mi sorprendo — я удивляюсь; di questa notizia — этой новости'],
+['Она удивляется ответу.','Si sorprende della risposta.','si sorprende — она удивляется; della risposta — ответу'],
+['Мы удивляемся редко.','Ci sorprendiamo raramente.','ci sorprendiamo — мы удивляемся; raramente — редко']
+]
+ };
+ const key=name.toLowerCase();
+
+ const extra={
+  'svegliarsi':[
+   ['Ты просыпаешься в семь в будние дни.','Ti svegli alle sette nei giorni feriali.','ti svegli — ты просыпаешься; alle sette — в семь; nei giorni feriali — в будние дни',2],
+   ['Лука просыпается рано в отеле, потому что утром едет в аэропорт.','Luca si sveglia presto in hotel perché la mattina va in aeroporto.','Luca — Лука; si sveglia — просыпается; presto — рано; in hotel — в отеле; perché — потому что; la mattina — утром; va — едет; in aeroporto — в аэропорт',3]
+  ],
+  'alzarsi':[
+   ['Анна встаёт в половине восьмого и завтракает дома.','Anna si alza alle sette e mezza e fa colazione a casa.','Anna — Анна; si alza — встаёт; alle sette e mezza — в 7:30; fa colazione — завтракает; a casa — дома',2],
+   ['По субботам мы встаём позже, потому что не работаем.','Il sabato ci alziamo più tardi perché non lavoriamo.','il sabato — по субботам; ci alziamo — мы встаём; più tardi — позже; perché — потому что; non lavoriamo — не работаем',3]
+  ],
+  'lavarsi':[
+   ['Дети моют руки в ванной перед ужином.','I bambini si lavano le mani in bagno prima di cena.','i bambini — дети; si lavano — моют; le mani — руки; in bagno — в ванной; prima di cena — перед ужином',2],
+   ['Когда Марко приходит домой после работы, он сразу умывается.','Quando Marco torna a casa dopo il lavoro, si lava subito.','quando — когда; torna a casa — возвращается домой; dopo il lavoro — после работы; si lava — умывается; subito — сразу',3]
+  ],
+  'vestirsi':[
+   ['Вы одеваетесь утром в спальне.','Vi vestite la mattina in camera da letto.','vi vestite — вы одеваетесь; la mattina — утром; in camera da letto — в спальне',2],
+   ['Перед тем как выйти в ресторан, Анна одевается и смотрится в зеркало.','Prima di uscire al ristorante, Anna si veste e si guarda allo specchio.','prima di uscire — перед тем как выйти; al ristorante — в ресторан; si veste — одевается; si guarda — смотрится; allo specchio — в зеркало',3]
+  ],
+  'addormentarsi':[
+   ['Лука засыпает на диване после фильма.','Luca si addormenta sul divano dopo il film.','Luca — Лука; si addormenta — засыпает; sul divano — на диване; dopo il film — после фильма',2],
+   ['Мы обычно засыпаем поздно, когда возвращаемся домой после вечеринки.','Di solito ci addormentiamo tardi quando torniamo a casa dopo la festa.','di solito — обычно; ci addormentiamo — мы засыпаем; tardi — поздно; quando — когда; torniamo a casa — возвращаемся домой; dopo la festa — после вечеринки',3]
+  ],
+  'riposarsi':[
+   ['Мои родители отдыхают в саду после обеда.','I miei genitori si riposano in giardino dopo pranzo.','i miei genitori — мои родители; si riposano — отдыхают; in giardino — в саду; dopo pranzo — после обеда',2],
+   ['После долгой поездки мы немного отдыхаем в отеле, а потом идём гулять.','Dopo un lungo viaggio ci riposiamo un po’ in hotel e poi andiamo a fare una passeggiata.','dopo un lungo viaggio — после долгой поездки; ci riposiamo — мы отдыхаем; un po’ — немного; in hotel — в отеле; poi — потом; andiamo a fare una passeggiata — идём гулять',3]
+  ],
+  'divertirsi':[
+   ['Дети веселятся в парке после школы.','I bambini si divertono al parco dopo la scuola.','i bambini — дети; si divertono — веселятся; al parco — в парке; dopo la scuola — после школы',2],
+   ['Когда мы встречаемся с друзьями в центре, мы всегда хорошо проводим время.','Quando incontriamo gli amici in centro, ci divertiamo sempre.','quando — когда; incontriamo — встречаем; gli amici — друзей; in centro — в центре; ci divertiamo — веселимся; sempre — всегда',3]
+  ],
+  'arrabbiarsi':[
+   ['Ты злишься утром, когда автобус опаздывает.','Ti arrabbi la mattina quando l’autobus è in ritardo.','ti arrabbi — ты злишься; la mattina — утром; quando — когда; l’autobus — автобус; è in ritardo — опаздывает',2],
+   ['Мария злится на брата, потому что он всегда берёт её вещи.','Maria si arrabbia con suo fratello perché prende sempre le sue cose.','si arrabbia — злится; con suo fratello — на брата; perché — потому что; prende — берёт; sempre — всегда; le sue cose — её вещи',3]
+  ],
+  'cambiarsi':[
+   ['После спорта дети переодеваются в раздевалке.','Dopo lo sport i bambini si cambiano nello spogliatoio.','dopo lo sport — после спорта; i bambini — дети; si cambiano — переодеваются; nello spogliatoio — в раздевалке',2],
+   ['Когда я прихожу домой вечером, я переодеваюсь и готовлю ужин.','Quando torno a casa la sera, mi cambio e preparo la cena.','quando — когда; torno a casa — прихожу домой; la sera — вечером; mi cambio — переодеваюсь; preparo la cena — готовлю ужин',3]
+  ],
+  'pettinarsi':[
+   ['Девочка причёсывается в ванной перед школой.','La bambina si pettina in bagno prima della scuola.','la bambina — девочка; si pettina — причёсывается; in bagno — в ванной; prima della scuola — перед школой',2],
+   ['Перед выходом Анна долго причёсывается перед большим зеркалом.','Prima di uscire Anna si pettina a lungo davanti al grande specchio.','prima di uscire — перед выходом; si pettina — причёсывается; a lungo — долго; davanti al grande specchio — перед большим зеркалом',3]
+  ],
+  'prepararsi a':[
+   ['Мы готовимся к поездке завтра утром.','Ci prepariamo al viaggio domani mattina.','ci prepariamo — мы готовимся; al viaggio — к поездке; domani mattina — завтра утром',2],
+   ['Лука готовится выйти из дома в восемь, потому что работает в центре.','Luca si prepara a uscire di casa alle otto perché lavora in centro.','si prepara a uscire — готовится выйти; di casa — из дома; alle otto — в восемь; perché — потому что; lavora — работает; in centro — в центре',3]
+  ],
+  'sedersi':[
+   ['Гости садятся за стол в восемь вечера.','Gli ospiti si siedono a tavola alle otto di sera.','gli ospiti — гости; si siedono — садятся; a tavola — за стол; alle otto di sera — в восемь вечера',2],
+   ['Когда преподаватель входит в класс, студенты встают, а потом снова садятся.','Quando il professore entra in classe, gli studenti si alzano e poi si siedono di nuovo.','quando — когда; il professore — преподаватель; entra in classe — входит в класс; gli studenti — студенты; si alzano — встают; poi — потом; si siedono di nuovo — снова садятся',3]
+  ],
+  'truccarsi':[
+   ['Анна красится в ванной перед работой.','Anna si trucca in bagno prima del lavoro.','Anna — Анна; si trucca — красится; in bagno — в ванной; prima del lavoro — перед работой',2],
+   ['По пятницам она красится вечером перед тем, как встретиться с друзьями.','Il venerdì si trucca la sera prima di incontrare gli amici.','il venerdì — по пятницам; si trucca — красится; la sera — вечером; prima di — перед тем как; incontrare gli amici — встретиться с друзьями',3]
+  ],
+  'trovarsi':[
+   ['Музей находится рядом с вокзалом в центре города.','Il museo si trova vicino alla stazione in centro.','il museo — музей; si trova — находится; vicino alla stazione — рядом с вокзалом; in centro — в центре',2],
+   ['Сегодня вечером мы находимся в Риме, а завтра утром едем во Флоренцию.','Stasera ci troviamo a Roma e domani mattina andiamo a Firenze.','stasera — сегодня вечером; ci troviamo — мы находимся; a Roma — в Риме; domani mattina — завтра утром; andiamo — едем; a Firenze — во Флоренцию',3]
+  ]
+ };
+ if(bank[key]){
+   const base=bank[key].map((x,i)=>[x[0],x[1],x[2],i<2?1:2]);
+   return base.concat(extra[key]||[]);
+ }
+ const formData=makeForms(name);
+ const f1=formData[0][1],f2=formData[2][1],f3=formData[3][1];
+ return [
+ [`Я сегодня использую глагол «${ru}».`,`${f1} oggi.`,`${f1} — форма для io; oggi — сегодня`,1],
+ [`Он сегодня: «${ru}».`,`${f2} oggi.`,`${f2} — форма для lui/lei; oggi — сегодня`,1],
+ [`Мы сегодня: «${ru}».`,`${f3} oggi.`,`${f3} — форма для noi; oggi — сегодня`,2]
+ ];
+}
+const basicWords=[{w:'casa',ru:'дом',a:'la',g:'f'},{w:'giorno',ru:'день',a:'il',g:'m'},{w:'anno',ru:'год',a:'l\'',g:'m'},{w:'uomo',ru:'мужчина',a:'l\'',g:'m'},{w:'donna',ru:'женщина',a:'la',g:'f'},{w:'amico',ru:'друг',a:'l\'',g:'m'},{w:'amica',ru:'подруга',a:'l\'',g:'f'},{w:'lavoro',ru:'работа',a:'il',g:'m'},{w:'tempo',ru:'время',a:'il',g:'m'},{w:'vita',ru:'жизнь',a:'la',g:'f'},{w:'mano',ru:'рука',a:'la',g:'f'},{w:'parte',ru:'часть',a:'la',g:'f'},{w:'famiglia',ru:'семья',a:'la',g:'f'},{w:'madre',ru:'мама',a:'la',g:'f'},{w:'padre',ru:'папа',a:'il',g:'m'},{w:'figlio',ru:'сын',a:'il',g:'m'},{w:'figlia',ru:'дочь',a:'la',g:'f'},{w:'bambino',ru:'ребёнок',a:'il',g:'m'},{w:'persona',ru:'человек',a:'la',g:'f'},{w:'gente',ru:'люди',a:'la',g:'f'},{w:'nome',ru:'имя',a:'il',g:'m'},{w:'parola',ru:'слово',a:'la',g:'f'},{w:'lingua',ru:'язык',a:'la',g:'f'},{w:'domanda',ru:'вопрос',a:'la',g:'f'},{w:'risposta',ru:'ответ',a:'la',g:'f'},{w:'storia',ru:'история',a:'la',g:'f'},{w:'idea',ru:'идея',a:'l\'',g:'f'},{w:'problema',ru:'проблема',a:'il',g:'m'},{w:'momento',ru:'момент',a:'il',g:'m'},{w:'mondo',ru:'мир',a:'il',g:'m'},{w:'paese',ru:'страна, городок',a:'il',g:'m'},{w:'città',ru:'город',a:'la',g:'f'},{w:'strada',ru:'улица, дорога',a:'la',g:'f'},{w:'piazza',ru:'площадь',a:'la',g:'f'},{w:'stazione',ru:'вокзал, станция',a:'la',g:'f'},{w:'aeroporto',ru:'аэропорт',a:'l\'',g:'m'},{w:'viaggio',ru:'путешествие',a:'il',g:'m'},{w:'vacanza',ru:'отпуск',a:'la',g:'f'},{w:'mare',ru:'море',a:'il',g:'m'},{w:'montagna',ru:'гора',a:'la',g:'f'},{w:'spiaggia',ru:'пляж',a:'la',g:'f'},{w:'sole',ru:'солнце',a:'il',g:'m'},{w:'luna',ru:'луна',a:'la',g:'f'},{w:'cielo',ru:'небо',a:'il',g:'m'},{w:'acqua',ru:'вода',a:'l\'',g:'f'},{w:'pane',ru:'хлеб',a:'il',g:'m'},{w:'latte',ru:'молоко',a:'il',g:'m'},{w:'caffè',ru:'кофе',a:'il',g:'m'},{w:'tè',ru:'чай',a:'il',g:'m'},{w:'vino',ru:'вино',a:'il',g:'m'},{w:'birra',ru:'пиво',a:'la',g:'f'},{w:'carne',ru:'мясо',a:'la',g:'f'},{w:'pesce',ru:'рыба',a:'il',g:'m'},{w:'frutta',ru:'фрукты',a:'la',g:'f'},{w:'verdura',ru:'овощи',a:'la',g:'f'},{w:'mela',ru:'яблоко',a:'la',g:'f'},{w:'arancia',ru:'апельсин',a:'l\'',g:'f'},{w:'pomodoro',ru:'помидор',a:'il',g:'m'},{w:'colazione',ru:'завтрак',a:'la',g:'f'},{w:'pranzo',ru:'обед',a:'il',g:'m'},{w:'cena',ru:'ужин',a:'la',g:'f'},{w:'ristorante',ru:'ресторан',a:'il',g:'m'},{w:'bar',ru:'бар',a:'il',g:'m'},{w:'negozio',ru:'магазин',a:'il',g:'m'},{w:'mercato',ru:'рынок',a:'il',g:'m'},{w:'soldi',ru:'деньги',a:'i',g:'m'},{w:'prezzo',ru:'цена',a:'il',g:'m'},{w:'conto',ru:'счёт',a:'il',g:'m'},{w:'macchina',ru:'машина',a:'la',g:'f'},{w:'autobus',ru:'автобус',a:'l\'',g:'m'},{w:'treno',ru:'поезд',a:'il',g:'m'},{w:'bicicletta',ru:'велосипед',a:'la',g:'f'},{w:'biglietto',ru:'билет',a:'il',g:'m'},{w:'camera',ru:'комната',a:'la',g:'f'},{w:'letto',ru:'кровать',a:'il',g:'m'},{w:'tavolo',ru:'стол',a:'il',g:'m'},{w:'sedia',ru:'стул',a:'la',g:'f'},{w:'porta',ru:'дверь',a:'la',g:'f'},{w:'finestra',ru:'окно',a:'la',g:'f'},{w:'chiave',ru:'ключ',a:'la',g:'f'},{w:'borsa',ru:'сумка',a:'la',g:'f'},{w:'telefono',ru:'телефон',a:'il',g:'m'},{w:'computer',ru:'компьютер',a:'il',g:'m'},{w:'libro',ru:'книга',a:'il',g:'m'},{w:'giornale',ru:'газета',a:'il',g:'m'},{w:'musica',ru:'музыка',a:'la',g:'f'},{w:'film',ru:'фильм',a:'il',g:'m'},{w:'foto',ru:'фотография',a:'la',g:'f'},{w:'scuola',ru:'школа',a:'la',g:'f'},{w:'università',ru:'университет',a:'l\'',g:'f'},{w:'lezione',ru:'урок',a:'la',g:'f'},{w:'professore',ru:'преподаватель',a:'il',g:'m'},{w:'professoressa',ru:'преподавательница',a:'la',g:'f'},{w:'studente',ru:'студент',a:'lo',g:'m'},{w:'studentessa',ru:'студентка',a:'la',g:'f'},{w:'mattina',ru:'утро',a:'la',g:'f'},{w:'pomeriggio',ru:'день',a:'il',g:'m'},{w:'sera',ru:'вечер',a:'la',g:'f'},{w:'notte',ru:'ночь',a:'la',g:'f'},{w:'settimana',ru:'неделя',a:'la',g:'f'},{w:'mese',ru:'месяц',a:'il',g:'m'},{w:'ora',ru:'час',a:'l\'',g:'f'},{w:'minuto',ru:'минута',a:'il',g:'m'},{w:'testa',ru:'голова',a:'la',g:'f'},{w:'occhio',ru:'глаз',a:'l\'',g:'m'},{w:'viso',ru:'лицо',a:'il',g:'m'},{w:'cuore',ru:'сердце',a:'il',g:'m'},{w:'salute',ru:'здоровье',a:'la',g:'f'},{w:'medico',ru:'врач',a:'il',g:'m'},{w:'ospedale',ru:'больница',a:'l\'',g:'m'},{w:'farmacia',ru:'аптека',a:'la',g:'f'},{w:'tempo libero',ru:'свободное время',a:'il',g:'m'},{w:'sport',ru:'спорт',a:'lo',g:'m'},{w:'partita',ru:'матч',a:'la',g:'f'},{w:'festa',ru:'праздник, вечеринка',a:'la',g:'f'},{w:'regalo',ru:'подарок',a:'il',g:'m'},{w:'amore',ru:'любовь',a:'l\'',g:'m'},{w:'paura',ru:'страх',a:'la',g:'f'},{w:'felicità',ru:'счастье',a:'la',g:'f'},{w:'fortuna',ru:'удача',a:'la',g:'f'},
+{w:'cucina',ru:'кухня',a:'la',g:'f'},{w:'piatto',ru:'тарелка, блюдо',a:'il',g:'m'},{w:'bicchiere',ru:'стакан, бокал',a:'il',g:'m'},{w:'tazza',ru:'чашка',a:'la',g:'f'},
+{w:'forchetta',ru:'вилка',a:'la',g:'f'},{w:'coltello',ru:'нож',a:'il',g:'m'},{w:'cucchiaio',ru:'ложка',a:'il',g:'m'},{w:'pentola',ru:'кастрюля',a:'la',g:'f'},
+{w:'padella',ru:'сковорода',a:'la',g:'f'},{w:'frigorifero',ru:'холодильник',a:'il',g:'m'},{w:'forno',ru:'духовка',a:'il',g:'m'},{w:'lavastoviglie',ru:'посудомоечная машина',a:'la',g:'f'},
+{w:'bottiglia',ru:'бутылка',a:'la',g:'f'},{w:'zucchero',ru:'сахар',a:'lo',g:'m'},{w:'sale',ru:'соль',a:'il',g:'m'},{w:'farina',ru:'мука',a:'la',g:'f'},
+{w:'riso',ru:'рис',a:'il',g:'m'},{w:'pasta',ru:'паста, макароны',a:'la',g:'f'},{w:'formaggio',ru:'сыр',a:'il',g:'m'},{w:'uovo',ru:'яйцо',a:"l'",g:'m'},
+{w:'burro',ru:'масло сливочное',a:'il',g:'m'},{w:'olio',ru:'масло растительное',a:"l'",g:'m'},{w:'salsa',ru:'соус',a:'la',g:'f'},{w:'insalata',ru:'салат',a:"l'",g:'f'},
+{w:'patata',ru:'картофель',a:'la',g:'f'},{w:'cipolla',ru:'лук',a:'la',g:'f'},{w:'aglio',ru:'чеснок',a:"l'",g:'m'},{w:'carota',ru:'морковь',a:'la',g:'f'},
+{w:'limone',ru:'лимон',a:'il',g:'m'},{w:'banana',ru:'банан',a:'la',g:'f'},{w:'fragola',ru:'клубника',a:'la',g:'f'},{w:'uva',ru:'виноград',a:"l'",g:'f'},
+{w:'supermercato',ru:'супермаркет',a:'il',g:'m'},{w:'carrello',ru:'тележка',a:'il',g:'m'},{w:'cestino',ru:'корзина',a:'il',g:'m'},{w:'scontrino',ru:'чек',a:'lo',g:'m'},
+{w:'cassa',ru:'касса',a:'la',g:'f'},{w:'cliente',ru:'клиент',a:'il',g:'m'},{w:'commesso',ru:'продавец',a:'il',g:'m'},{w:'commessa',ru:'продавщица',a:'la',g:'f'},
+{w:'scaffale',ru:'полка, стеллаж',a:'lo',g:'m'},{w:'offerta',ru:'предложение, акция',a:"l'",g:'f'},{w:'sconto',ru:'скидка',a:'lo',g:'m'},{w:'confezione',ru:'упаковка',a:'la',g:'f'},
+{w:'pacco',ru:'пачка, посылка',a:'il',g:'m'},{w:'busta',ru:'пакет, конверт',a:'la',g:'f'},{w:'amicizia',ru:'дружба',a:"l'",g:'f'},{w:'rabbia',ru:'злость',a:'la',g:'f'},
+{w:'tristezza',ru:'грусть',a:'la',g:'f'},{w:'gioia',ru:'радость',a:'la',g:'f'},{w:'sorpresa',ru:'удивление, сюрприз',a:'la',g:'f'},{w:'vergogna',ru:'стыд',a:'la',g:'f'},
+{w:'gelosia',ru:'ревность',a:'la',g:'f'},{w:'fiducia',ru:'доверие',a:'la',g:'f'},{w:'speranza',ru:'надежда',a:'la',g:'f'},{w:'desiderio',ru:'желание',a:'il',g:'m'},
+{w:'sogno',ru:'мечта, сон',a:'il',g:'m'},{w:'marito',ru:'муж',a:'il',g:'m'},{w:'moglie',ru:'жена',a:'la',g:'f'},{w:'fratello',ru:'брат',a:'il',g:'m'},
+{w:'sorella',ru:'сестра',a:'la',g:'f'},{w:'nonno',ru:'дедушка',a:'il',g:'m'},{w:'nonna',ru:'бабушка',a:'la',g:'f'},{w:'zio',ru:'дядя',a:'lo',g:'m'},
+{w:'zia',ru:'тётя',a:'la',g:'f'},{w:'cugino',ru:'двоюродный брат',a:'il',g:'m'},{w:'cugina',ru:'двоюродная сестра',a:'la',g:'f'},{w:'collega',ru:'коллега',a:'il',g:'m'},
+{w:'vicino',ru:'сосед',a:'il',g:'m'},{w:'vicina',ru:'соседка',a:'la',g:'f'},{w:'salotto',ru:'гостиная',a:'il',g:'m'},{w:'bagno',ru:'ванная комната',a:'il',g:'m'},
+{w:'corridoio',ru:'коридор',a:'il',g:'m'},{w:'balcone',ru:'балкон',a:'il',g:'m'},{w:'giardino',ru:'сад',a:'il',g:'m'},{w:'armadio',ru:'шкаф',a:"l'",g:'m'},
+{w:'specchio',ru:'зеркало',a:'lo',g:'m'},{w:'lampada',ru:'лампа',a:'la',g:'f'},{w:'divano',ru:'диван',a:'il',g:'m'},{w:'tappeto',ru:'ковёр',a:'il',g:'m'},
+{w:'asciugamano',ru:'полотенце',a:"l'",g:'m'},{w:'sapone',ru:'мыло',a:'il',g:'m'},{w:'spazzolino',ru:'зубная щётка',a:'lo',g:'m'},{w:'dentifricio',ru:'зубная паста',a:'il',g:'m'},
+{w:'spazzola',ru:'щётка',a:'la',g:'f'},{w:'pettine',ru:'расчёска',a:'il',g:'m'},{w:'cuscino',ru:'подушка',a:'il',g:'m'},{w:'coperta',ru:'одеяло',a:'la',g:'f'},
+{w:'lenzuolo',ru:'простыня',a:'il',g:'m'}];
+let learned=JSON.parse(localStorage.getItem('italianoLearned')||'[]');let learnedVerbs=JSON.parse(localStorage.getItem('italianoLearnedVerbs')||'[]');let knownDayWords=JSON.parse(localStorage.getItem('italianoKnownDayWords')||'[]');let myWords=JSON.parse(localStorage.getItem('italianoWords')||'[]');let selectedWordIds=JSON.parse(localStorage.getItem('italianoSelectedWords')||'[]');let learnedVerbSentences=JSON.parse(localStorage.getItem('italianoLearnedVerbSentences')||'[]');let verbTranslationStats=JSON.parse(localStorage.getItem('italianoVerbTranslationStats')||'{}');let currentTranslationHadError=false;let dayIndex=new Date().getDate()%dayWords.length;let currentVerb=0,currentEx=0,currentMode='translate',buildTokens=[],selectedPron=null,selectedForm=null;let wordStudyList=[],wordStudyIndex=0,wordMode='flash';let paroleQueueIndex=0;let lastKnownAction=null;let reviewKnownKey=null;
+function save(){localStorage.setItem('italianoLearned',JSON.stringify(learned));localStorage.setItem('italianoLearnedVerbs',JSON.stringify(learnedVerbs));localStorage.setItem('italianoKnownDayWords',JSON.stringify(knownDayWords));localStorage.setItem('italianoSelectedWords',JSON.stringify(selectedWordIds));localStorage.setItem('italianoWords',JSON.stringify(myWords));localStorage.setItem('italianoLearnedVerbSentences',JSON.stringify(learnedVerbSentences));localStorage.setItem('italianoVerbTranslationStats',JSON.stringify(verbTranslationStats))}
+function openScreen(id){const sentenceOverlay=document.getElementById('sentenceLearnedOverlay');if(sentenceOverlay)sentenceOverlay.classList.remove('show');document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.open===id));window.scrollTo(0,0);if(id==='verbs')renderVerbList();if(id==='words'){selectedWordIds=[];wordStudyList=[];paroleQueueIndex=0;save();shuffleParoleDeck();renderWords();setParoleTab(paroleTab||'learn');}}
+document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openScreen(b.dataset.open));
+function isWordKnown(w){const key=String(w||'').toLowerCase();return learned.includes(key)||knownDayWords.includes(key)||myWords.some(x=>(x.w||'').toLowerCase()===key&&x.learned)}
+function availableDayWords(){return dayWords.filter(d=>!isWordKnown(d.w))}
+function renderDay(){const available=availableDayWords();if(!available.length){dayWord.textContent='Bravissima!';dayPron.textContent='Ты выучила все слова дня';dayGender.textContent='✓';dayArticle.textContent='';dayExample.textContent='';dayExampleRu.textContent='';knowDayWord.style.display='none';nextWord.style.display='none';return}knowDayWord.style.display='grid';nextWord.style.display='grid';dayIndex=((dayIndex%available.length)+available.length)%available.length;const d=available[dayIndex];dayWord.textContent=d.w;dayPron.textContent=`${d.pron} · ${d.ru}`;dayGender.textContent=d.g;dayArticle.textContent=d.a;dayExample.textContent=`“${d.ex}”`;dayExampleRu.textContent=d.exru;knowDayWord.classList.remove('known');knowDayWord.textContent='○'}nextWord.onclick=()=>{const available=availableDayWords();if(!available.length)return;dayIndex=(dayIndex+1)%available.length;renderDay()};knowDayWord.onclick=()=>{const available=availableDayWords();if(!available.length)return;const d=available[dayIndex%available.length],key=d.w.toLowerCase();knowDayWord.classList.add('flash');knowDayWord.textContent='✓';const from=dayWord.getBoundingClientRect();const widget=(typeof learnedWidget!=='undefined'&&learnedWidget?learnedWidget:null);const target=widget?widget.getBoundingClientRect():null;const ghost=document.createElement('div');ghost.className='fly-word';ghost.textContent=d.w;ghost.style.left=(from.left+from.width/2)+'px';ghost.style.top=(from.top+from.height/2)+'px';ghost.style.transform='translate(-50%,-50%)';document.body.appendChild(ghost);if(target){const sx=from.left+from.width/2,sy=from.top+from.height/2,tx=target.left+target.width/2,ty=target.top+target.height/2,dx=tx-sx,dy=ty-sy;ghost.style.setProperty('--fly-x',dx+'px');ghost.style.setProperty('--fly-y',dy+'px');ghost.style.setProperty('--fly-x-mid',(dx*.58)+'px');ghost.style.setProperty('--fly-y-mid',(dy*.35-35)+'px');requestAnimationFrame(()=>ghost.classList.add('flying'))}setTimeout(()=>{ghost.remove();if(widget){widget.classList.add('catch');setTimeout(()=>widget.classList.remove('catch'),500)}if(!knownDayWords.includes(key))knownDayWords.push(key);if(!learned.includes(key))learned.push(key);save();dayIndex=0;knowDayWord.classList.remove('flash');renderDay();updateProgress()},1270)};
+function getLearnedItems(){const seen=new Set(),items=[];const add=(w,ru)=>{const k=String(w||'').toLowerCase();if(!k||seen.has(k))return;if(!learned.includes(k)&&!knownDayWords.includes(k)&&!learnedVerbs.includes(w)&&!learnedVerbs.includes(k))return;seen.add(k);items.push({w,ru:ru||''})};dayWords.forEach(x=>add(x.w,x.ru));basicWords.forEach(x=>add(x.w,x.ru));myWords.forEach(x=>add(x.w,x.ru));verbs.forEach(x=>add(x.name,x.ru));[...learned,...knownDayWords].forEach(k=>{if(!seen.has(k))add(k,'')});return items.sort((a,b)=>a.w.localeCompare(b.w,'it'))}
+function renderLearnedDrawer(){if(typeof learnedDrawer==='undefined'||!learnedDrawer)return;const items=getLearnedItems();learnedDrawer.innerHTML=items.length?items.map(x=>`<div class="learned-row"><b>${x.w}</b><span>${x.ru||'—'}</span><button class="unlearn-btn" data-unlearn="${String(x.w).replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" aria-label="Убрать из выученных">×</button></div>`).join(''):'<div class="learned-row"><b>Пока пусто</b><span>Отмечай слова ✓</span><span></span></div>';learnedDrawer.querySelectorAll('[data-unlearn]').forEach(b=>b.onclick=e=>{e.stopPropagation();unlearnItem(b.dataset.unlearn)})}
+function unlearnItem(word){const key=String(word||'').toLowerCase();learned=learned.filter(x=>String(x).toLowerCase()!==key);knownDayWords=knownDayWords.filter(x=>String(x).toLowerCase()!==key);learnedVerbs=learnedVerbs.filter(x=>String(x).toLowerCase()!==key);myWords.forEach(x=>{if(String(x.w||'').toLowerCase()===key)x.learned=false});reviewKnownKey=null;if(lastKnownAction&&lastKnownAction.w===key)lastKnownAction=null;save();updateProgress();renderDay();shuffleParoleDeck();if(document.getElementById('words').classList.contains('active'))renderWords();renderLearnedDrawer()}
+function updateProgress(){const vocab=new Set([...learned,...knownDayWords,...learnedVerbs].map(x=>String(x).toLowerCase()));const total=vocab.size;if(typeof learnedCount!=='undefined'&&learnedCount)learnedCount.textContent=total;if(typeof learnedCountTop!=='undefined'&&learnedCountTop)learnedCountTop.textContent=total;if(typeof progressBar!=='undefined'&&progressBar)progressBar.style.width=Math.min(100,(total/50)*100)+'%';if(typeof goalBar!=='undefined'&&goalBar)goalBar.style.width=Math.min(100,(total/50)*100)+'%';renderLearnedDrawer()}
+
+function reflexiveEmoji(name){
+ const k=String(name||'').toLowerCase();
+ const map={
+  'abbronzarsi':'☀️','abituarsi a':'🔁','accontentarsi di':'🙂','addormentarsi':'😴','allontanarsi':'↔️',
+  'alzarsi':'🛏️','annoiarsi':'🥱','arrabbiarsi':'😠','aspettarsi di':'⏳','battersi':'🥊','bruciarsi':'🔥',
+  'cambiarsi':'👕','vantarsi di':'😎','vestirsi':'👗','chiamarsi':'🏷️','chiedersi':'❓','comportarsi':'🎭',
+  'comprarsi':'🛍️','coricarsi':'🌙','decidersi a':'✅','dirsi':'💭','divertirsi':'🎉','domandarsi':'🤔',
+  'esprimersi':'💬','farsi i capelli':'💇','farsi il bagno':'🛁','farsi la barba':'🪒','truccarsi':'💄',
+  'farsi male':'🤕','fidanzarsi':'💍','guardarsi':'🪞','lamentarsi':'😩','lavarsi':'🧼','mettersi':'▶️',
+  'mettesi +глагол':'▶️','nascondersi':'🙈','occuparsi di':'🫶','pettinarsi':'🪮','preoccuparsi di':'😟',
+  'prepararsi a':'🎒','presentarsi a':'👋','rassegnarsi a':'😮‍💨','trovarsi':'📍','rendersi conto di':'💡',
+  'ricordarsi di':'🧠','riposarsi':'🛋️','rompersi':'🩹','sbagliarsi':'❌','sbrigarsi':'⏱️','sedersi':'🪑',
+  'servirsi di':'🧰','sorprendersi di':'😮','speciallizzarsi in':'🎓','specializzarsi in':'🎓',
+  'sposarsi con':'💒','svegliarsi':'⏰','tagliarsi':'✂️'
+ };
+ if(map[k])return map[k];
+ for(const key in map){if(k.startsWith(key))return map[key]}
+ return '✨';
+}
+
+
+let preferredItalianVoice=null;
+function chooseItalianFemaleVoice(){
+ const voices=window.speechSynthesis?.getVoices?.()||[];
+ const italian=voices.filter(v=>/^it(?:-|_)/i.test(v.lang)||/ital/i.test(v.name));
+ const preferredNames=[
+   'elsa','isabella','alice','federica','bianca','paola','luciana','carla','giorgia',
+   'google italiano','google italian','microsoft elsa','microsoft isabella'
+ ];
+ const naturalHints=['natural','premium','enhanced','neural','online'];
+ const scored=italian.map(v=>{
+   const n=v.name.toLowerCase();
+   let score=0;
+   preferredNames.forEach((x,i)=>{if(n.includes(x))score+=100-i});
+   naturalHints.forEach(x=>{if(n.includes(x))score+=20});
+   if(v.lang.toLowerCase()==='it-it')score+=10;
+   return {v,score};
+ }).sort((a,b)=>b.score-a.score);
+ preferredItalianVoice=scored[0]?.v||italian[0]||null;
+ return preferredItalianVoice;
+}
+if('speechSynthesis' in window){
+ chooseItalianFemaleVoice();
+ window.speechSynthesis.onvoiceschanged=()=>chooseItalianFemaleVoice();
+}
+function speakItalian(text,btn){
+ if(!text)return;
+ if(!('speechSynthesis' in window)){alert('На этом устройстве озвучивание недоступно.');return}
+ window.speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(text);
+ u.lang='it-IT';
+ u.rate=.92;
+ u.pitch=1.03;
+ const voice=preferredItalianVoice||chooseItalianFemaleVoice();
+ if(voice)u.voice=voice;
+ if(btn)btn.classList.add('speaking');
+ u.onend=u.onerror=()=>{if(btn)btn.classList.remove('speaking')};
+ window.speechSynthesis.speak(u);
+}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-speak]');
+ if(!b)return;
+ e.preventDefault();e.stopPropagation();
+ speakItalian(decodeURIComponent(b.dataset.speak),b);
+});
+
+function renderVerbList(filter=''){verbList.innerHTML=verbs.filter(v=>(v.name+' '+v.ru).toLowerCase().includes(filter.toLowerCase())).map(v=>{const idx=verbs.indexOf(v),done=learnedVerbs.includes(v.name);return `<div class="verb-card"><div class="verb-card-main"><div class="verb-title-row"><span class="verb-emoji">${reflexiveEmoji(v.name)}</span><b>${v.name}</b><button class="sound-btn" data-speak="${encodeURIComponent(v.name)}" aria-label="Слушать произношение ${v.name}">🔊</button></div><small>${v.ru}</small></div><div class="verb-card-actions"><button data-verb="${idx}">Учить</button><button class="verb-known ${done?'done':''}" data-doneverb="${idx}" aria-label="Отметить выученным">${done?'✓ Знаю':'Знаю'}</button></div></div>`}).join('');verbList.querySelectorAll('[data-verb]').forEach(b=>b.onclick=()=>{currentVerb=+b.dataset.verb;currentEx=0;currentMode='translate';renderTrainer();openScreen('trainer')});verbList.querySelectorAll('[data-doneverb]').forEach(b=>b.onclick=()=>{const v=verbs[+b.dataset.doneverb];if(learnedVerbs.includes(v.name))learnedVerbs=learnedVerbs.filter(x=>x!==v.name);else learnedVerbs.push(v.name);save();renderVerbList(verbSearch.value);updateProgress()})}verbSearch.oninput=e=>renderVerbList(e.target.value);
+function renderTrainer(){const v=verbs[currentVerb];trainerCount.textContent=`${currentVerb+1} / ${verbs.length}`;trainerVerb.innerHTML=`<span>${v.name}</span><button class="sound-btn title-sound" data-speak="${encodeURIComponent(v.name)}" aria-label="Слушать ${v.name}">🔊</button>`;trainerRu.textContent=v.ru;conj.innerHTML=v.forms.map(x=>`<div class="p">${x[0]}</div><div><b>${x[1]}</b><button class="sound-btn conj-sound" data-speak="${encodeURIComponent(x[1])}" aria-label="Слушать ${x[1]}">🔊</button></div>`).join('');document.querySelectorAll('.mode-tab').forEach(x=>x.classList.toggle('active',x.dataset.mode===currentMode));renderExercise()}
+function norm(s){return s.toLowerCase().replace(/[.!?,;]/g,'').replace(/\s+/g,' ').trim()}
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+
+function sentenceId(v,ex){return `${v.name}::${ex[0]}`}
+function currentVerbStats(v){
+ const k=v.name.toLowerCase();
+ if(!verbTranslationStats[k])verbTranslationStats[k]={level:1,cleanStreak:0};
+ return verbTranslationStats[k];
+}
+function learnedSentencesForVerb(v){
+ const ids=new Set(learnedVerbSentences);
+ return v.exercises.filter(ex=>ids.has(sentenceId(v,ex)));
+}
+function availableTranslationExercises(v){
+ const ids=new Set(learnedVerbSentences),st=currentVerbStats(v);
+ let level=Math.max(1,Math.min(3,st.level||1));
+ let pool=v.exercises.filter(ex=>(ex[3]||1)<=level&&!ids.has(sentenceId(v,ex)));
+ if(!pool.length){
+   const higher=v.exercises.filter(ex=>(ex[3]||1)>level&&!ids.has(sentenceId(v,ex)));
+   if(higher.length){
+     level=Math.min(3,level+1);st.level=level;st.cleanStreak=0;save();
+     pool=v.exercises.filter(ex=>(ex[3]||1)<=level&&!ids.has(sentenceId(v,ex)));
+   }
+ }
+ return pool;
+}
+function currentTranslationExercise(v){
+ const pool=availableTranslationExercises(v);
+ if(!pool.length)return null;
+ currentEx=((currentEx%pool.length)+pool.length)%pool.length;
+ return pool[currentEx];
+}
+function renderLearnedSentenceOverlay(v){
+ let overlay=document.getElementById('sentenceLearnedOverlay');
+ if(!overlay){overlay=document.createElement('div');overlay.id='sentenceLearnedOverlay';overlay.className='sentence-learned-overlay';document.body.appendChild(overlay)}
+ const items=learnedSentencesForVerb(v);
+ overlay.innerHTML=`<div class="sentence-overlay-head"><b>Выучено · ${items.length}</b><button class="learned-sentences-btn" id="closeLearnedSentences">Закрыть</button></div><div class="sentence-overlay-list">${items.length?items.map(x=>`<div class="learned-sentence-row"><div class="ru">${x[0]}</div><div class="it">${x[1]}</div></div>`).join(''):'<div class="lesson-note">Здесь появятся предложения, которые ты перевела правильно.</div>'}</div>`;
+ closeLearnedSentences.onclick=()=>overlay.classList.remove('show');
+ return overlay;
+}
+function toggleLearnedSentenceOverlay(v){
+ const overlay=renderLearnedSentenceOverlay(v);
+ overlay.classList.toggle('show');
+}
+
+function renderExercise(){const v=verbs[currentVerb];let ex=currentMode==='translate'?currentTranslationExercise(v):v.exercises[currentEx%v.exercises.length];exerciseCard.innerHTML='';if(currentMode==='translate'){if(!ex){const learnedItems=learnedSentencesForVerb(v);exerciseCard.innerHTML=`<div class="translate-topline"><div class="section-label">Перевод</div><button class="learned-sentences-btn" id="openLearnedSentences">Выучено · ${learnedItems.length}</button></div><p class="prompt">Все доступные предложения для этого глагола уже выучены 🎉</p>`;openLearnedSentences.onclick=()=>toggleLearnedSentenceOverlay(v);return}const st=currentVerbStats(v),learnedItems=learnedSentencesForVerb(v),levelName=st.level===1?'Просто':st.level===2?'Средне':'Сложнее';
+exerciseCard.innerHTML=`<div class="translate-topline"><div class="section-label">Переведи на итальянский</div><button class="learned-sentences-btn" id="openLearnedSentences">Выучено · ${learnedItems.length}</button></div><div class="level-pill">${levelName}</div><p class="prompt">${ex[0]}</p><textarea class="field" id="trainerAnswer" rows="4" placeholder="Напиши ответ по-итальянски…"></textarea><button class="hint-btn" id="showHint">Подсказка</button><div class="hint-box" id="hintBox"><b>Слова для перевода</b>${ex[2]||'Подсказка пока не добавлена.'}</div><button class="primary" id="checkAnswer">Проверить</button><div class="feedback" id="trainerFeedback"></div><button class="primary" id="nextExercise">Ещё предложение</button>`;
+openLearnedSentences.onclick=()=>toggleLearnedSentenceOverlay(v);
+showHint.onclick=()=>{const open=hintBox.classList.toggle('show');showHint.textContent=open?'Скрыть подсказку':'Подсказка'};
+currentTranslationHadError=false;
+checkAnswer.onclick=()=>{
+ const u=norm(trainerAnswer.value),c=norm(ex[1]);
+ trainerFeedback.className='feedback show';
+ if(u===c){
+   const id=sentenceId(v,ex);
+   if(!learnedVerbSentences.includes(id))learnedVerbSentences.push(id);
+   const beforeLevel=st.level||1;
+   if(!currentTranslationHadError)st.cleanStreak=(st.cleanStreak||0)+1;else st.cleanStreak=0;
+   if(st.cleanStreak>=3&&st.level<3){st.level++;st.cleanStreak=0}
+   save();
+   trainerFeedback.className='feedback correct-feedback';
+   trainerFeedback.innerHTML=`<b>✓ Отлично</b><br>${ex[1]}${st.level>beforeLevel?`<div class="level-up-note">Следующий уровень открыт — предложения станут сложнее</div>`:''}`;
+   trainerAnswer.disabled=true;checkAnswer.disabled=true;
+ }else{
+   currentTranslationHadError=true;st.cleanStreak=0;save();
+   trainerFeedback.innerHTML=`<b>Проверь форму</b><br>Правильный вариант: ${ex[1]}`;
+ }
+};
+nextExercise.onclick=()=>{currentEx++;renderExercise()}}
+else if(currentMode==='form'){const persons=['io','tu','lui/lei','noi','voi','loro'],i=currentEx%6,correct=v.forms[i][1],pool=shuffle([correct,...v.forms.filter((_,j)=>j!==i).map(x=>x[1]).slice(0,3)]);exerciseCard.innerHTML=`<div class="section-label">Выбери правильную форму</div><p class="prompt">${persons[i]} · ${v.name}</p><div class="choice-grid">${pool.map(x=>`<button class="choice-btn" data-choice="${x}">${x}</button>`).join('')}</div><div class="feedback" id="trainerFeedback"></div><button class="primary" id="nextExercise">Следующий пример</button>`;exerciseCard.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>{exerciseCard.querySelectorAll('[data-choice]').forEach(x=>x.disabled=true);b.classList.add(b.dataset.choice===correct?'correct':'wrong');trainerFeedback.className='feedback show';trainerFeedback.innerHTML=b.dataset.choice===correct?'<b>✓ Верно</b>':`Правильно: <b>${correct}</b>`});nextExercise.onclick=()=>{currentEx++;renderExercise()}}
+else if(currentMode==='build'){buildTokens=[];const words=ex[1].replace(/[.!?]/g,'').split(/\s+/),pool=shuffle(words.map((w,i)=>({w,i})));exerciseCard.innerHTML=`<div class="section-label">Собери фразу</div><p class="prompt">${ex[0]}</p><div class="built-answer" id="builtAnswer">Нажимай слова по порядку</div><div class="word-bank">${pool.map((x,j)=>`<button class="word-chip" data-token="${j}" data-word="${x.w}">${x.w}</button>`).join('')}</div><button class="primary" id="checkBuild">Проверить</button><div class="feedback" id="trainerFeedback"></div>`;exerciseCard.querySelectorAll('[data-token]').forEach(b=>b.onclick=()=>{if(b.classList.contains('used'))return;b.classList.add('used');buildTokens.push(b.dataset.word);builtAnswer.textContent=buildTokens.join(' ')});checkBuild.onclick=()=>{trainerFeedback.className='feedback show';trainerFeedback.innerHTML=norm(buildTokens.join(' '))===norm(ex[1])?'<b>✓ Отлично</b>':`Правильно: <b>${ex[1]}</b>`}}
+else{selectedPron=null;selectedForm=null;const left=shuffle(v.forms.map(x=>x[0])),right=shuffle(v.forms.map(x=>x[1]));exerciseCard.innerHTML=`<div class="section-label">Соедини местоимение и форму</div><p class="prompt">${v.name}</p><div class="match-grid"><div class="match-col">${left.map(x=>`<button class="match-btn" data-pron="${x}">${x}</button>`).join('')}</div><div class="match-col">${right.map(x=>`<button class="match-btn" data-form="${x}">${x}</button>`).join('')}</div></div><div class="feedback" id="trainerFeedback"></div>`;exerciseCard.querySelectorAll('[data-pron]').forEach(b=>b.onclick=()=>{if(b.classList.contains('matched'))return;exerciseCard.querySelectorAll('[data-pron]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');selectedPron=b.dataset.pron;tryMatch()});exerciseCard.querySelectorAll('[data-form]').forEach(b=>b.onclick=()=>{if(b.classList.contains('matched'))return;exerciseCard.querySelectorAll('[data-form]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');selectedForm=b.dataset.form;tryMatch()})}}
+function tryMatch(){if(!selectedPron||!selectedForm)return;const v=verbs[currentVerb],pair=v.forms.find(x=>x[0]===selectedPron);const pb=exerciseCard.querySelector(`[data-pron="${CSS.escape(selectedPron)}"]`),fb=exerciseCard.querySelector(`[data-form="${CSS.escape(selectedForm)}"]`);if(pair&&pair[1]===selectedForm){pb.classList.remove('selected');fb.classList.remove('selected');pb.classList.add('matched');fb.classList.add('matched');trainerFeedback.className='feedback show';trainerFeedback.innerHTML='<b>✓ Пара верная</b>'}else{trainerFeedback.className='feedback show';trainerFeedback.innerHTML='Попробуй ещё раз';pb.classList.remove('selected');fb.classList.remove('selected')}selectedPron=null;selectedForm=null}
+document.querySelectorAll('.mode-tab').forEach(b=>b.onclick=()=>{currentMode=b.dataset.mode;currentEx=0;renderTrainer()});
+function readPhoto(file,cb){if(!file)return cb('');const r=new FileReader();r.onload=()=>cb(r.result);r.readAsDataURL(file)}
+toggleAddWord.onclick=()=>{addWordForm.style.display=addWordForm.style.display==='none'?'block':'none'};addWord.onclick=()=>{const w=newWord.value.trim(),ru=newTranslation.value.trim();if(!w||!ru)return;readPhoto(newPhoto.files[0],photo=>{myWords.push({w,ru,a:newArticle.value.trim(),g:newGender.value,photo,learned:false});save();newWord.value='';newTranslation.value='';newArticle.value='';newPhoto.value='';addWordForm.style.display='none';paroleQueueIndex=0;renderWords()})};
+function wordKey(x){return `${(x.w||'').toLowerCase()}::${(x.ru||'').toLowerCase()}`}
+let paroleDeck=[];function parolePool(){const merged=[...myWords.map(x=>({...x,source:'mine'})),...basicWords.filter(b=>!myWords.some(m=>(m.w||'').toLowerCase()===b.w.toLowerCase())).map(x=>({...x,photo:'',learned:false,source:'base'}))];return merged.filter(x=>!x.learned&&!learned.includes((x.w||'').toLowerCase())&&!knownDayWords.includes((x.w||'').toLowerCase()))}
+function shuffleParoleDeck(){paroleDeck=shuffle(parolePool())}
+function updateSelectedMeta(){const count=selectedWordIds.length;selectedWordsMeta.textContent=`Выбрано: ${count} из 5`;studySelected.disabled=count===0}
+function attachSwipe(card,key){let startX=0,dx=0,dragging=false;const moveVisual=()=>{card.style.transform=`translateX(${Math.max(-170,Math.min(170,dx))}px) rotate(${dx/18}deg)`;card.style.opacity=String(Math.max(.45,1-Math.abs(dx)/260))};const finish=()=>{if(!dragging)return;dragging=false;if(dx<-55){if(!selectedWordIds.includes(key)&&selectedWordIds.length<5)selectedWordIds.push(key);paroleQueueIndex++}else if(dx>55){selectedWordIds=selectedWordIds.filter(x=>x!==key);paroleQueueIndex++}save();renderWords()};card.addEventListener('pointerdown',e=>{dragging=true;startX=e.clientX;dx=0;try{card.setPointerCapture(e.pointerId)}catch(_){}});card.addEventListener('pointermove',e=>{if(!dragging)return;dx=e.clientX-startX;moveVisual()});card.addEventListener('pointerup',finish);card.addEventListener('pointercancel',finish);card.addEventListener('touchstart',e=>{if(!e.touches[0])return;dragging=true;startX=e.touches[0].clientX;dx=0},{passive:true});card.addEventListener('touchmove',e=>{if(!dragging||!e.touches[0])return;dx=e.touches[0].clientX-startX;moveVisual();if(Math.abs(dx)>12)e.preventDefault()},{passive:false});card.addEventListener('touchend',finish,{passive:true})}
+function renderWords(){if(!paroleDeck.length)shuffleParoleDeck();let pool=paroleDeck.filter(x=>!isWordKnown(x.w));let reviewItem=null;if(reviewKnownKey){reviewItem=[...myWords,...basicWords].find(x=>wordKey(x)===reviewKnownKey)||null}if(!pool.length&&!reviewItem){wordList.innerHTML='<div class="form-card">Слова закончились. Добавь свои слова в базу.</div>';updateSelectedMeta();return}if(paroleQueueIndex>=Math.max(pool.length,1))paroleQueueIndex=0;const visible=[];if(reviewItem){visible.push(reviewItem);for(let i=0;i<Math.min(2,pool.length);i++)visible.push(pool[(paroleQueueIndex+i)%pool.length])}else{for(let i=0;i<Math.min(3,pool.length);i++)visible.push(pool[(paroleQueueIndex+i)%pool.length])}wordList.innerHTML=visible.map((x,idx)=>{const key=wordKey(x),selected=selectedWordIds.includes(key),g=x.g==='m'?'мужской род':x.g==='f'?'женский род':'без рода',reviewing=key===reviewKnownKey;return `<div class="swipe-card ${selected?'selected':''}" data-swipekey="${key}"><div class="selected-badge">✓ Выбрано</div>${lastKnownAction&&!reviewKnownKey&&idx===0?'<button class="undo-known-btn" data-undo-known>Назад</button>':''}<button class="know-card-btn ${reviewing?'known':''}" data-know-card="${key}">Знаю</button><button class="sound-btn word-sound" data-speak="${encodeURIComponent(x.w)}" aria-label="Слушать ${x.w}">🔊</button><div class="word-big">${x.w}</div><div class="word-ru">${x.ru}</div><div class="word-meta"><span>${x.a||'без артикля'}</span><span>${g}</span></div><div class="swipe-hint"><span>← Учить</span><span>Пропустить →</span></div></div>`}).join('');const top=wordList.querySelector('[data-swipekey]');if(top){const soundBtn=top.querySelector('[data-speak]');if(soundBtn){['pointerdown','touchstart','mousedown'].forEach(ev=>soundBtn.addEventListener(ev,e=>e.stopPropagation(),{passive:true}))}if(!reviewKnownKey)attachSwipe(top,top.dataset.swipekey);const knowBtn=top.querySelector('[data-know-card]');if(knowBtn){['pointerdown','touchstart','mousedown'].forEach(ev=>knowBtn.addEventListener(ev,e=>e.stopPropagation(),{passive:true}));knowBtn.onclick=e=>{e.stopPropagation();if(reviewKnownKey===top.dataset.swipekey)unlearnReviewedWord();else markWordKnownByKey(top.dataset.swipekey)}}const undoBtn=top.querySelector('[data-undo-known]');if(undoBtn){['pointerdown','touchstart','mousedown'].forEach(ev=>undoBtn.addEventListener(ev,e=>e.stopPropagation(),{passive:true}));undoBtn.onclick=e=>{e.stopPropagation();undoLastKnownWord()}}}updateSelectedMeta()}
+
+let paroleTab='learn';
+function posLabel(pos){return ({noun:'Существительные',verb:'Глаголы',adjective:'Прилагательные',adverb:'Наречия',other:'Другое'})[pos]||'Другое'}
+function dictionaryItems(){
+ const nouns=[...basicWords.map(x=>({...x,pos:x.pos||'noun'})),...myWords.map(x=>({...x,pos:x.pos||'noun'}))];
+ const reflexive=verbs.map(v=>({w:v.name,ru:v.ru,a:'',g:'',pos:'verb'}));
+ const map=new Map();
+ [...nouns,...reflexive].forEach(x=>{const k=String(x.w||'').toLowerCase();if(k&&!map.has(k))map.set(k,x)});
+ return [...map.values()];
+}
+function renderDictionary(filter=''){
+ if(typeof dictionaryList==='undefined'||!dictionaryList)return;
+ const q=String(filter||'').trim().toLowerCase();
+ const order=['noun','verb','adjective','adverb','other'];
+ const groups={noun:[],verb:[],adjective:[],adverb:[],other:[]};
+ dictionaryItems().filter(x=>!q||(x.w+' '+x.ru).toLowerCase().includes(q)).forEach(x=>(groups[x.pos]||groups.other).push(x));
+ dictionaryList.innerHTML=order.map(pos=>{
+   const arr=groups[pos].sort((a,b)=>a.w.localeCompare(b.w,'it'));
+   if(!arr.length)return '';
+   return `<div class="dict-group"><h3>${posLabel(pos)}</h3>${arr.map(x=>`<div class="dict-row"><div><div class="dict-wordline"><div class="dict-word">${x.w}</div><button class="sound-btn" data-speak="${encodeURIComponent(x.w)}" aria-label="Слушать ${x.w}">🔊</button></div><div class="dict-ru">${x.ru||'—'}</div></div><div class="dict-meta">${x.a||''}${x.a&&x.g?' · ':''}${x.g==='m'?'м.р.':x.g==='f'?'ж.р.':''}</div></div>`).join('')}</div>`
+ }).join('')||'<div class="form-card">Ничего не найдено.</div>';
+}
+function setParoleTab(tab){
+ paroleTab=tab;
+ document.querySelectorAll('[data-parole-tab]').forEach(b=>b.classList.toggle('active',b.dataset.paroleTab===tab));
+ if(typeof paroleLearn!=='undefined'&&paroleLearn)paroleLearn.classList.toggle('active',tab==='learn');
+ if(typeof paroleDictionary!=='undefined'&&paroleDictionary)paroleDictionary.classList.toggle('active',tab==='dictionary');
+ if(tab==='dictionary')renderDictionary(typeof dictionarySearch!=='undefined'?dictionarySearch.value:'');
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-parole-tab]');if(b)setParoleTab(b.dataset.paroleTab)});
+setTimeout(()=>{if(typeof dictionarySearch!=='undefined'&&dictionarySearch)dictionarySearch.addEventListener('input',e=>renderDictionary(e.target.value))},0);
+
+function currentStudyWords(){return parolePool().filter(x=>selectedWordIds.includes(wordKey(x))).slice(0,5)}
+function markWordKnownByKey(key){const item=[...myWords,...basicWords].find(x=>wordKey(x)===key);if(!item)return;const w=(item.w||'').toLowerCase();const idx=myWords.findIndex(x=>wordKey(x)===key);lastKnownAction={key,w,myIndex:idx,wasMyLearned:idx>=0?!!myWords[idx].learned:false,wasLearned:learned.includes(w),selected:selectedWordIds.includes(key)};if(!learned.includes(w))learned.push(w);if(idx>=0)myWords[idx].learned=true;selectedWordIds=selectedWordIds.filter(x=>x!==key);paroleDeck=paroleDeck.filter(x=>wordKey(x)!==key);save();updateProgress();renderDay();renderWords()}
+function undoLastKnownWord(){if(!lastKnownAction)return;reviewKnownKey=lastKnownAction.key;renderWords()}
+function unlearnReviewedWord(){if(!lastKnownAction||reviewKnownKey!==lastKnownAction.key)return;const a=lastKnownAction;if(!a.wasLearned)learned=learned.filter(x=>x!==a.w);if(a.myIndex>=0&&myWords[a.myIndex])myWords[a.myIndex].learned=a.wasMyLearned;if(a.selected&&!selectedWordIds.includes(a.key))selectedWordIds.push(a.key);reviewKnownKey=null;lastKnownAction=null;save();updateProgress();renderDay();shuffleParoleDeck();renderWords()}
+function markCurrentWordLearned(){const item=wordStudyList[wordStudyIndex];if(!item)return;markWordKnownByKey(wordKey(item))}
+function nextStudyWord(){if(!wordStudyList.length)return;wordStudyIndex=(wordStudyIndex+1)%wordStudyList.length;renderWordExercise()}
+let wordStage=1,articleIndex=0,matchLeft=null,matchRight=null,matchDone=new Set(),spellIndex=0,spellBuilt=[];
+function setWordStageTitle(){const t=wordStage===1?'Этап 1 из 3 · Артикль':wordStage===2?'Этап 2 из 3 · Перевод':'Этап 3 из 3 · Собери слово';wordStageTitle.textContent=t;document.querySelectorAll('[data-word-stage]').forEach(b=>b.classList.toggle('active',Number(b.dataset.wordStage)===wordStage))}
+
+document.addEventListener('click',e=>{
+ const btn=e.target.closest('[data-word-stage]');
+ if(!btn)return;
+ if(!wordStudyList.length)return;
+ wordStage=Number(btn.dataset.wordStage);
+ if(wordStage===1){articleIndex=Math.min(articleIndex,Math.max(0,wordStudyList.length-1))}
+ if(wordStage===2){matchLeft=null;matchRight=null}
+ if(wordStage===3){spellIndex=Math.min(spellIndex,Math.max(0,wordStudyList.length-1));spellBuilt=[]}
+ renderWordExercise();
+});
+
+function renderWordExercise(){
+ if(!wordStudyList.length){wordExerciseCard.innerHTML='<b>Сначала выбери 5 слов в разделе Parole.</b>';return}
+ setWordStageTitle();
+ if(wordStage===1)return renderArticleStage();
+ if(wordStage===2)return renderMatchStage();
+ renderSpellStage();
+}
+
+function articleExplanation(x,chosen,correct){
+ const word=String(x.w||'').toLowerCase();
+ const gender=x.g==='f'?'женского':'мужского';
+ const startsVowel=/^[aeiouàèéìòóù]/i.test(word);
+ const specialMasc=/^(s[^aeiouàèéìòóù]|z|gn|ps|pn|x|y)/i.test(word);
+ let rule='';
+ if(correct==="l'") rule=`Перед словом, начинающимся с гласной, в единственном числе используется <b>l’</b>.`;
+ else if(correct==='lo') rule=`Для существительного мужского рода перед s + согласная, z, gn, ps, pn, x или y используется <b>lo</b>.`;
+ else if(correct==='il') rule=`Для большинства существительных мужского рода в единственном числе перед согласной используется <b>il</b>.`;
+ else if(correct==='la') rule=`Для существительных женского рода в единственном числе перед согласной используется <b>la</b>.`;
+ else if(correct==='i') rule=`Это форма множественного числа мужского рода: обычно <b>i</b> — множественное от il.`;
+ else if(correct==='gli') rule=`Это форма множественного числа мужского рода: <b>gli</b> употребляется перед гласной и особыми сочетаниями вроде s + согласная, z, gn.`;
+ else if(correct==='le') rule=`Для существительных женского рода во множественном числе используется <b>le</b>.`;
+ else rule=`Для этого слова правильная форма артикля — <b>${correct}</b>.`;
+ return `<b>Пока не так: ${chosen} ${x.w}</b><div class="why">Правильно: <b>${correct} ${x.w}</b>.<br>${rule}</div>`;
+}
+
+function renderArticleStage(){
+ const x=wordStudyList[articleIndex];wordTrainerCount.textContent=`${articleIndex+1} / ${wordStudyList.length}`;
+ const correct=x.a||'—';const arts=['il','lo','la','l\'','i','gli','le','—'].filter(a=>a!==correct);const opts=shuffle([correct,...shuffle(arts).slice(0,3)]);
+ wordExerciseCard.innerHTML=`<div class="section-label">Выбери артикль</div><p class="prompt">___ ${x.w}</p><div class="choice-grid">${opts.map(o=>`<button class="choice-btn" data-art="${o}">${o}</button>`).join('')}</div><div class="feedback" id="wordFeedback"></div>`;
+ wordExerciseCard.querySelectorAll('[data-art]').forEach(b=>b.onclick=()=>{if(b.dataset.art===correct){b.style.background='#111';b.style.color='#fff';b.style.borderColor='#111';wordFeedback.className='feedback correct-feedback';wordFeedback.innerHTML='<b>Ты выбрала правильный ответ</b>';setTimeout(()=>{articleIndex++;if(articleIndex>=wordStudyList.length){wordStage=2;matchDone=new Set();matchLeft=null;matchRight=null}renderWordExercise()},1450)}else{b.style.background='#e5e7eb';b.style.color='#111';b.style.borderColor='#cfd4da';wordFeedback.className='feedback wrong-feedback';wordFeedback.innerHTML=articleExplanation(x,b.dataset.art,correct)}})
+}
+function renderMatchStage(){
+ wordTrainerCount.textContent=`${matchDone.size} / ${wordStudyList.length}`;
+ const left=wordStudyList.map((x,i)=>({i,text:`${x.a?x.a+' ':''}${x.w}`}));const right=shuffle(wordStudyList.map((x,i)=>({i,text:x.ru})));
+ wordExerciseCard.innerHTML=`<div class="section-label">Соотнеси слово и перевод</div><div class="match-grid"><div class="match-col">${left.map(x=>`<button class="match-btn ${matchDone.has(x.i)?'matched':''}" data-mi="${x.i}" data-side="l">${x.text}</button>`).join('')}</div><div class="match-col">${right.map(x=>`<button class="match-btn ${matchDone.has(x.i)?'matched':''}" data-mi="${x.i}" data-side="r">${x.text}</button>`).join('')}</div></div><div class="feedback" id="wordFeedback"></div>`;
+ wordExerciseCard.querySelectorAll('.match-btn').forEach(b=>b.onclick=()=>{if(b.classList.contains('matched'))return;const i=Number(b.dataset.mi);if(b.dataset.side==='l'){matchLeft=i;wordExerciseCard.querySelectorAll('[data-side="l"]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')}else{matchRight=i;wordExerciseCard.querySelectorAll('[data-side="r"]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')}if(matchLeft!==null&&matchRight!==null){if(matchLeft===matchRight){matchDone.add(matchLeft);wordFeedback.className='feedback correct-feedback';wordFeedback.innerHTML='<b>✓ Верная пара</b>';matchLeft=null;matchRight=null;if(matchDone.size===wordStudyList.length){setTimeout(()=>{wordStage=3;spellIndex=0;spellBuilt=[];renderWordExercise()},1200)}else setTimeout(renderMatchStage,950)}else{wordFeedback.className='feedback show';wordFeedback.innerHTML='Попробуй еще раз';matchLeft=null;matchRight=null;setTimeout(renderMatchStage,500)}}})
+}
+function renderSpellStage(){
+ const x=wordStudyList[spellIndex];wordTrainerCount.textContent=`${spellIndex+1} / ${wordStudyList.length}`;const letters=shuffle(x.w.split('').map((ch,i)=>({ch,i})));
+ wordExerciseCard.innerHTML=`<div class="section-label">Собери слово</div><p class="prompt" style="text-align:center">${x.ru}</p><div class="built-answer" id="spellBuilt"></div><div class="word-bank">${letters.map((o,j)=>`<button class="word-chip" data-letter="${j}" data-ch="${o.ch}">${o.ch}</button>`).join('')}</div><button class="primary" id="checkLetters">Проверить</button><div class="feedback" id="wordFeedback"></div>`;
+ const spellBuiltEl=wordExerciseCard.querySelector('#spellBuilt');
+ const renderBuilt=()=>{spellBuiltEl.innerHTML=spellBuilt.length?spellBuilt.map((o,i)=>`<button class="built-letter" data-built-index="${i}" aria-label="Вернуть букву ${o.ch}">${o.ch}</button>`).join(''):'<span style="color:#8a8a8a">Собери слово по буквам</span>';spellBuiltEl.querySelectorAll('[data-built-index]').forEach(btn=>btn.onclick=()=>{const i=Number(btn.dataset.builtIndex);const removed=spellBuilt.splice(i,1)[0];if(removed){const source=wordExerciseCard.querySelector(`[data-letter="${removed.slot}"]`);if(source)source.classList.remove('used')}renderBuilt()})};
+ renderBuilt();
+ wordExerciseCard.querySelectorAll('[data-letter]').forEach(b=>b.onclick=()=>{if(b.classList.contains('used'))return;b.classList.add('used');spellBuilt.push({ch:b.dataset.ch,slot:Number(b.dataset.letter)});renderBuilt()});
+ checkLetters.onclick=()=>{const ans=spellBuilt.map(x=>x.ch).join('');wordFeedback.className='feedback show';if(norm(ans)===norm(x.w)){wordFeedback.className='feedback correct-feedback';wordFeedback.innerHTML='<b>Ты выбрала правильный ответ</b>';setTimeout(()=>{spellIndex++;spellBuilt=[];if(spellIndex>=wordStudyList.length){wordExerciseCard.innerHTML='<div class="section-label">Готово</div><p class="prompt">Ты прошла все 3 упражнения 🎉</p><button class="primary" id="finishWords">Вернуться к словам</button>';wordTrainerCount.textContent='5 / 5';finishWords.onclick=()=>{selectedWordIds=[];wordStudyList=[];paroleQueueIndex=0;save();shuffleParoleDeck();openScreen('words')}}else renderWordExercise()},1350)}else{wordFeedback.innerHTML='Попробуй еще раз';spellBuilt=[];setTimeout(renderWordExercise,550)}}
+}
+
+studySelected.onclick=()=>{wordStudyList=currentStudyWords();if(wordStudyList.length<1)return;wordStage=1;articleIndex=0;matchDone=new Set();matchLeft=null;matchRight=null;spellIndex=0;spellBuilt=[];renderWordExercise();openScreen('wordTrainer')};
+
+shuffleParoleDeck();
+if(typeof learnedWidget!=='undefined'&&learnedWidget){learnedWidget.onclick=()=>{const open=learnedWidget.classList.toggle('expanded');learnedWidget.setAttribute('aria-expanded',String(open));if(open)renderLearnedDrawer()}}
+renderDay();updateProgress();renderVerbList();
+</script>
+
+<div class="reader-overlay" id="readerOverlay" aria-hidden="true">
+  <div class="reader-sheet">
+    <div class="reader-head"><b id="readerTitle">Материал</b><div style="display:flex;gap:8px"><button class="reader-close" id="readerPopout" aria-label="Открыть отдельно">↗</button><button class="reader-close" id="readerClose" aria-label="Закрыть">×</button></div></div>
+    <iframe class="reader-frame" id="readerFrame" title="Учебный материал"></iframe>
+  </div>
+</div>
+
+</body>
+</html>
