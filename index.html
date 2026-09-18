@@ -22,6 +22,144 @@ document.querySelectorAll('.tool-card[href]').forEach(a=>{
   });
 });
 
+
+
+const felicitaPhrases={
+ 'tenersi-per-mano':{
+   title:'tenersi per mano',
+   ru:'держаться за руки',
+   text:'Устойчивое выражение с возвратным глаголом tenersi. Употребляется, когда люди держат друг друга за руки.',
+   ex:'Ci teniamo per mano mentre camminiamo. — Мы держимся за руки, пока идём.'
+ },
+ 'in-mezzo-alla-gente':{
+   title:'in mezzo alla gente',
+   ru:'среди людей / посреди толпы',
+   text:'in mezzo a = «среди», «посреди». После него обычно ставится существительное или местоимение.',
+   ex:'Ti vedo in mezzo alla gente. — Я вижу тебя среди людей.'
+ },
+ 'restare-vicini':{
+   title:'restare vicini',
+   ru:'оставаться рядом / быть близко друг к другу',
+   text:'restare = оставаться; vicini = рядом, близко. Форма vicini согласуется с людьми во множественном числе.',
+   ex:'Vogliamo restare vicini. — Мы хотим оставаться рядом.'
+ },
+ 'abbassare-la-luce':{
+   title:'abbassare la luce',
+   ru:'приглушить свет',
+   text:'Буквально abbassare значит «опускать / уменьшать». С luce выражение означает сделать освещение менее ярким.',
+   ex:'Abbassiamo la luce per cenare. — Давай приглушим свет к ужину.'
+ },
+ 'fare-pace':{
+   title:'fare pace',
+   ru:'помириться',
+   text:'Очень частое устойчивое выражение. Буквально — «сделать мир».',
+   ex:'Dopo la discussione facciamo pace. — После ссоры мы миримся.'
+ },
+ 'lasciare-un-biglietto':{
+   title:'lasciare un biglietto',
+   ru:'оставить записку',
+   text:'lasciare = оставлять; biglietto здесь — записка, короткое сообщение на бумаге.',
+   ex:'Ti lascio un biglietto sul tavolo. — Я оставлю тебе записку на столе.'
+ },
+ 'cantare-a-due-voci':{
+   title:'cantare a due voci',
+   ru:'петь в два голоса',
+   text:'Устойчивый музыкальный оборот: два человека поют вместе, каждый своей партией или одновременно.',
+   ex:'Cantiamo questa canzone a due voci. — Мы поём эту песню в два голоса.'
+ },
+ 'quanto-mi-piaci':{
+   title:'quanto mi piaci',
+   ru:'как же ты мне нравишься',
+   text:'quanto усиливает эмоцию: «как сильно / как же». В конструкции piacere человек, который нравится, является грамматическим подлежащим.',
+   ex:'Quanto mi piace Roma! — Как же мне нравится Рим!'
+ },
+ 'senti-nellaria':{
+   title:"sentire nell'aria",
+   ru:'чувствовать / слышать в воздухе',
+   text:'Образное выражение: замечать настроение, ощущение или приближение чего-то.',
+   ex:"Si sente nell'aria che arriva l'estate. — В воздухе чувствуется приближение лета."
+ },
+ 'sa-di':{
+   title:'sapere di',
+   ru:'иметь вкус / запах / оттенок чего-то',
+   text:'Здесь sapere не значит «знать». Конструкция sapere di означает «пахнуть, отдавать, напоминать по вкусу или ощущению».',
+   ex:'Questa torta sa di limone. — Этот пирог отдаёт лимоном.'
+ },
+ 'una-sera-a-sorpresa':{
+   title:'a sorpresa',
+   ru:'неожиданно / в качестве сюрприза',
+   text:'a sorpresa описывает событие, которое происходит неожиданно и не было запланировано.',
+   ex:'Mi hanno organizzato una festa a sorpresa. — Мне устроили вечеринку-сюрприз.'
+ },
+ 'biglietto-dauguri':{
+   title:"biglietto d'auguri",
+   ru:'поздравительная открытка',
+   text:'auguri = поздравления / пожелания. Biglietto d’auguri — открытка к празднику, дню рождения и т.п.',
+   ex:"Ti mando un biglietto d'auguri. — Я отправлю тебе поздравительную открытку."
+ },
+ 'telefonata-non-aspettata':{
+   title:'una telefonata non aspettata',
+   ru:'неожиданный звонок',
+   text:'Буквально — звонок, которого не ждали. В современной речи также часто говорят una telefonata inaspettata.',
+   ex:'Ho ricevuto una telefonata inaspettata. — Я получила неожиданный звонок.'
+ },
+ 'londa-che-batte':{
+   title:"l'onda che batte",
+   ru:'волна, которая бьётся о берег',
+   text:'battere может означать «бить, ударяться». С onda описывает движение волны, ударяющейся о берег или скалы.',
+   ex:'Sento le onde che battono sulla riva. — Я слышу, как волны бьются о берег.'
+ },
+ 'una-mano-sul-cuore':{
+   title:'una mano sul cuore',
+   ru:'рука на сердце',
+   text:'Может быть буквальным жестом и эмоциональным образом искренности, любви или сильного чувства.',
+   ex:'Con una mano sul cuore ti dico la verità. — Положа руку на сердце, я говорю тебе правду.'
+ },
+ 'aspettare-laurora':{
+   title:"aspettare l'aurora",
+   ru:'ждать рассвета',
+   text:'aurora — рассвет, заря. Более поэтическое слово, чем alba.',
+   ex:"Aspettiamo l'aurora sulla spiaggia. — Мы ждём рассвета на пляже."
+ },
+ 'farlo-ancora':{
+   title:'farlo ancora',
+   ru:'сделать это снова',
+   text:'farlo = fare + lo, где lo заменяет ранее упомянутое действие; ancora здесь значит «ещё раз / снова».',
+   ex:'Mi piace così tanto che voglio farlo ancora. — Мне так нравится, что я хочу сделать это снова.'
+ }
+};
+
+let activePhraseId=null;
+function closePhraseOverlay(){
+ phraseExplainOverlay.classList.remove('show');
+ phraseExplainOverlay.setAttribute('aria-hidden','true');
+ activePhraseId=null;
+}
+document.addEventListener('click',e=>{
+ const trigger=e.target.closest('[data-phrase]');
+ if(trigger){
+   e.preventDefault();
+   const id=trigger.dataset.phrase;
+   if(activePhraseId===id && phraseExplainOverlay.classList.contains('show')){
+     closePhraseOverlay();
+     return;
+   }
+   const item=felicitaPhrases[id];
+   if(!item)return;
+   activePhraseId=id;
+   phraseExplainTitle.textContent=item.title;
+   phraseExplainRu.textContent=item.ru;
+   phraseExplainText.textContent=item.text;
+   phraseExplainExample.textContent=item.ex;
+   phraseExplainOverlay.classList.add('show');
+   phraseExplainOverlay.setAttribute('aria-hidden','false');
+   return;
+ }
+ if(e.target===phraseExplainOverlay)closePhraseOverlay();
+});
+phraseExplainClose.onclick=closePhraseOverlay;
+
+
 </script>
 <style>
 :root{
@@ -339,6 +477,131 @@ body{background:#f4f4f4}
 to{transform:translateY(0);opacity:1}}
 @media(max-width:380px){.tools-grid{gap:7px}.tool-card{padding:12px 8px;min-height:110px}.tool-card b{font-size:12px}.tool-card small{font-size:9px}}
 
+
+/* Songs */
+.song-list{display:grid;gap:12px;margin-top:16px}
+.song-card{width:100%;border:1px solid #dedede;background:#fff;color:#111;border-radius:20px;padding:16px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.song-card-main b{display:block;font-size:22px;line-height:1.05}
+.song-card-main small{display:block;color:#777;margin-top:8px;font-size:13px}
+.song-card .song-arrow{font-size:24px}
+.song-hero{margin:12px 0 18px}
+.song-hero h1{font-size:34px;line-height:1;margin:0}
+.song-hero p{margin:8px 0 0;color:#777}
+.song-columns{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.song-col{border:1px solid #dedede;border-radius:18px;background:#fff;padding:14px;min-height:220px}
+.song-col h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px;color:#777}
+.song-line{font-size:14px;line-height:1.6;margin:0 0 10px}
+.phrase-token{display:inline;border:0;background:transparent;padding:0;font:inherit;font-weight:900;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;color:#111}
+.phrase-note{display:none;margin:7px 0 11px;padding:10px 11px;border-radius:12px;background:#f3f3f3;border:1px solid #ddd;font-size:12px;line-height:1.45}
+.phrase-note.show{display:block;animation:phraseIn .22s ease both}
+.song-source{display:flex;gap:8px;margin-top:14px}
+.song-source a{display:inline-flex;text-decoration:none}
+@keyframes phraseIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:420px){
+  .song-columns{gap:7px}
+  .song-col{padding:11px 9px}
+  .song-line{font-size:12px;line-height:1.55}
+  .song-hero h1{font-size:30px}
+}
+
+
+/* Reflexive verbs: two-column mobile-friendly layout */
+#verbList{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+#verbList .verb-card{min-height:168px!important;padding:14px 12px 11px!important}
+#verbList .verb-card b{font-size:17px!important;line-height:1.1!important;overflow-wrap:anywhere!important}
+#verbList .verb-card small{font-size:11px!important;line-height:1.3!important;-webkit-line-clamp:3!important}
+#verbList .verb-card-actions button{font-size:10px!important;padding:8px 4px!important}
+@media(max-width:360px){
+  #verbList{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  #verbList .verb-card{min-height:160px!important;padding:12px 9px 10px!important}
+  #verbList .verb-card b{font-size:15px!important}
+  #verbList .verb-card small{font-size:10px!important}
+}
+
+
+/* Full song study layout */
+.song-lyrics-table{display:grid;grid-template-columns:1fr 1fr;border:1px solid #dedede;border-radius:20px;overflow:hidden;background:#fff}
+.song-lyrics-head{padding:12px 14px;background:#f5f5f5;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:#666;border-bottom:1px solid #e5e5e5}
+.song-lyrics-head:nth-child(1){border-right:1px solid #e5e5e5}
+.lyric-cell{padding:10px 13px;border-bottom:1px solid #efefef;font-size:13px;line-height:1.55;min-height:44px}
+.lyric-cell.it{border-right:1px solid #efefef}
+.lyric-cell.section{font-weight:900;background:#fafafa;color:#666;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.lyric-cell:last-child,.lyric-cell:nth-last-child(2){border-bottom:0}
+.phrase-token{display:inline;border:0;background:transparent;padding:0;font:inherit;font-weight:900;color:#111;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px;cursor:pointer}
+.phrase-token:active{opacity:.55}
+.phrase-explain-overlay{position:fixed;z-index:160;inset:0;background:rgba(0,0,0,.24);display:none;align-items:center;justify-content:center;padding:18px}
+.phrase-explain-overlay.show{display:flex;animation:phraseOverlayIn .2s ease both}
+.phrase-explain-card{width:min(100%,430px);max-height:72vh;overflow:auto;background:#fff;border:1px solid #d7d7d7;border-radius:24px;padding:18px;box-shadow:0 22px 70px rgba(0,0,0,.22);animation:phraseCardIn .25s cubic-bezier(.2,.8,.2,1) both}
+.phrase-explain-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.phrase-explain-head b{font-size:21px;line-height:1.1}
+.phrase-explain-close{width:34px;height:34px;border:1px solid #ddd;background:#fff;border-radius:50%;font-size:18px;flex:0 0 auto}
+.phrase-explain-ru{font-size:15px;font-weight:800;margin-top:12px}
+.phrase-explain-text{font-size:14px;line-height:1.55;color:#444;margin-top:8px}
+.phrase-explain-example{margin-top:12px;padding:11px 12px;background:#f4f4f4;border-radius:14px;font-size:13px;line-height:1.45}
+@keyframes phraseOverlayIn{from{opacity:0}to{opacity:1}}
+@keyframes phraseCardIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:420px){
+  .song-lyrics-table{grid-template-columns:1fr 1fr}
+  .lyric-cell{padding:9px 8px;font-size:11px;line-height:1.45}
+  .song-lyrics-head{padding:10px 8px;font-size:9px}
+  .phrase-explain-card{border-radius:20px;padding:16px}
+}
+
+
+.song-player{margin:12px 0 18px;background:#111;color:#fff;border-radius:20px;padding:14px}
+.song-player-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.song-player-title b{display:block;font-size:15px}
+.song-player-title small{display:block;color:#bbb;margin-top:4px}
+.song-audio{width:100%;height:38px;filter:invert(1) hue-rotate(180deg)}
+
+
+.song-audio-preview{display:grid;grid-template-columns:36px 1fr auto;gap:10px;align-items:center}
+.song-preview-play{width:36px;height:36px;border:1px solid #fff;background:#fff;color:#111;border-radius:50%;font-size:14px;padding:0;opacity:.95}
+.song-preview-track{height:4px;background:#3a3a3a;border-radius:999px;overflow:hidden}
+.song-preview-track span{display:block;width:0;height:100%;background:#fff}
+.song-preview-time{font-size:11px;color:#bbb}
+
+
+
+
+/* Visit calendar — reference layout */
+.visit-calendar{margin:14px 0 20px;width:100%}
+.visit-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;width:100%}
+.visit-day{position:relative;height:78px;border:1px solid #d9d9d9;border-radius:999px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-width:0}
+.visit-dot{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:#111;opacity:0}
+.visit-day.visited .visit-dot{opacity:1}
+.visit-day .dow{font-size:11px;font-weight:500;color:#929292;line-height:1;margin-top:5px}
+.visit-day .date{font-size:16px;font-weight:700;color:#303030;line-height:1}
+.visit-day.today{background:#111;border-color:#111}
+.visit-day.today .dow,.visit-day.today .date{color:#fff}
+.visit-day.today .visit-dot{background:#fff}
+@media(max-width:360px){
+  .visit-week{gap:5px}
+  .visit-day{height:72px}
+  .visit-day .dow{font-size:10px}
+  .visit-day .date{font-size:15px}
+}
+
+</style>
+
+<style>
+.visit-calendar{margin:10px auto 18px;max-width:500px}
+.visit-week{gap:6px}
+.visit-day{height:66px!important}
+.visit-day .dow{font-size:10px!important}
+.visit-day .date{font-size:14px!important}
+.visit-dot{top:7px!important;width:4px!important;height:4px!important}
+@media(max-width:360px){
+ .visit-calendar{max-width:100%}
+ .visit-week{gap:4px}
+ .visit-day{height:61px!important}
+ .visit-day .dow{font-size:9px!important}
+ .visit-day .date{font-size:13px!important}
+}
+</style>
+
+<style>
+.song-player .song-audio{display:block;width:100%;height:42px;filter:none}
 </style>
 </head>
 <body>
@@ -347,12 +610,14 @@ to{transform:translateY(0);opacity:1}}
   <div class="header"><div class="brand"><div class="wave">👋</div><div><b>Italiano</b><small>Учимся вместе</small></div></div><div class="head-actions"><button class="circle">⌕</button><div class="avatar">◯</div></div></div>
   <div class="home-topline"><h1>Слово дня</h1><div class="success-widget" id="learnedWidget" role="button" aria-expanded="false"><small>Выучено</small><b id="learnedCountTop">0</b><span>слов</span><div class="learned-drawer" id="learnedDrawer"></div></div></div>
   <div class="word-card"><div class="word-main" id="dayWord">sole</div><div class="pron" id="dayPron">[ˈsoːle] · солнце</div><div class="chips"><span class="chip" id="dayGender">m · муж. род</span><span class="chip" id="dayArticle">il sole</span></div><div class="example" id="dayExample">“Il sole rende tutto più bello.”</div><div class="example-ru" id="dayExampleRu">Солнце делает всё прекраснее.</div><div class="day-actions"><button class="speak" id="nextWord" aria-label="Другое слово">↻</button><button class="know-day" id="knowDayWord" aria-label="Я знаю это слово">✓</button></div></div>
+  <div class="visit-calendar" aria-label="Календарь посещений"><div class="visit-week" id="visitWeek"><div class="visit-day" data-date="2026-09-14"><span class="visit-dot"></span><span class="dow">Пн</span><span class="date">14</span></div><div class="visit-day" data-date="2026-09-15"><span class="visit-dot"></span><span class="dow">Вт</span><span class="date">15</span></div><div class="visit-day" data-date="2026-09-16"><span class="visit-dot"></span><span class="dow">Ср</span><span class="date">16</span></div><div class="visit-day" data-date="2026-09-17"><span class="visit-dot"></span><span class="dow">Чт</span><span class="date">17</span></div><div class="visit-day today" data-date="2026-09-18"><span class="visit-dot"></span><span class="dow">Пт</span><span class="date">18</span></div><div class="visit-day" data-date="2026-09-19"><span class="visit-dot"></span><span class="dow">Сб</span><span class="date">19</span></div><div class="visit-day" data-date="2026-09-20"><span class="visit-dot"></span><span class="dow">Вс</span><span class="date">20</span></div></div></div>
   <div class="learned-summary"><div class="big-num" id="learnedCount">0</div><small>выученных слов</small><div class="bar"><span id="progressBar"></span></div></div>
   <div class="section-head"><h2>Разделы обучения</h2><span>Все разделы →</span></div>
   <div class="grid">
     <button class="tile white" data-open="textbook"><div class="icon">▦</div><div><b>Учебник</b><small>Все темы и объяснения итальянского</small></div><div class="arrow">→</div></button>
     <button class="tile blue" data-open="verbs"><div class="icon">↻</div><div><b>🪞 Verbi riflessivi</b><small>Возвратные глаголы · 55 глаголов</small></div><div class="arrow">→</div></button>
     <button class="tile mint" data-open="words"><div class="icon">▤</div><div><b>Parole</b><small>Слова · базовый список</small></div><div class="arrow">→</div></button>
+    <button class="tile white" data-open="songs"><div class="icon">♪</div><div><b>Песни</b><small>Итальянский через музыку</small></div><div class="arrow">→</div></button>
   </div>
   <div class="tools-section">
     <div class="section-head"><h2>Инструменты</h2><span>Под рукой</span></div>
@@ -363,12 +628,106 @@ to{transform:translateY(0);opacity:1}}
       <a class="tool-card" href="https://context.reverso.net/translation/italian-russian/" target="_blank" rel="noopener noreferrer">
         <div><div class="tool-icon">🔎</div><b>Reverso</b><small>Итальянский ↔ русский</small></div><div class="tool-arrow">→</div>
       </a>
-      <a class="tool-card" href="./Italiano_Contemporaneo_Esercizi_(1).pdf" target="_blank" rel="noopener noreferrer">
+      <a class="tool-card" href="./tommaso-bueno.pdf" target="_blank" rel="noopener noreferrer">
         <div><div class="tool-icon">📕</div><b>Tommaso Bueno</b><small>Практикум по грамматике</small></div><div class="tool-arrow">→</div>
       </a>
     </div>
   </div>
 </section>
+
+
+<section id="songs" class="screen">
+  <div class="backrow"><button class="back" data-open="home">←</button><div>Песни</div></div>
+  <h1 class="page-title">Песни</h1>
+  <p class="page-sub">Слушай, читай и запоминай живые выражения.</p>
+  <div class="song-list">
+    <button class="song-card" data-open="song-felicita">
+      <div class="song-card-main"><b>Felicità</b><small>Al Bano &amp; Romina Power</small></div>
+      <div class="song-arrow">→</div>
+    </button>
+  </div>
+</section>
+
+
+
+<section id="song-felicita" class="screen">
+  <div class="backrow"><button class="back" data-open="songs">←</button><div>Песни</div></div>
+  <div class="song-hero">
+    <h1>Felicità</h1>
+    <p>Al Bano &amp; Romina Power</p>
+  </div>
+
+  <div class="song-player">
+    <div class="song-player-top">
+      <div class="song-player-title"><b>Felicità</b><small>Al Bano &amp; Romina Power</small></div>
+      <div>♪</div>
+    </div>
+    <audio class="song-audio" controls preload="metadata">
+      <source src="./felicita.mp3" type="audio/mpeg">
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+
+  <div class="song-lyrics-table">
+    <div class="song-lyrics-head">Italiano</div><div class="song-lyrics-head">Русский</div>
+
+    <div class="lyric-cell section it">Strofa 1 · Al Bano</div><div class="lyric-cell section">Куплет 1 · Al Bano</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="tenersi-per-mano">tenersi per mano</button>, andare lontano, la felicità</div><div class="lyric-cell">Это держаться за руки, идти далеко — вот что такое счастье.</div>
+    <div class="lyric-cell it">È il tuo sguardo innocente <button class="phrase-token" data-phrase="in-mezzo-alla-gente">in mezzo alla gente</button>, la felicità</div><div class="lyric-cell">Это твой невинный взгляд среди людей — счастье.</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="restare-vicini">restare vicini</button> come bambini, la felicità</div><div class="lyric-cell">Это оставаться рядом, как дети, — счастье.</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+
+    <div class="lyric-cell section it">Strofa 2 · Romina Power</div><div class="lyric-cell section">Куплет 2 · Romina Power</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+    <div class="lyric-cell it">È un cuscino di piume, l'acqua del fiume che passa e che va</div><div class="lyric-cell">Это перьевая подушка, вода реки, которая течёт и уходит.</div>
+    <div class="lyric-cell it">È la pioggia che scende dietro le tende, la felicità</div><div class="lyric-cell">Это дождь, который идёт за занавесками, — счастье.</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="abbassare-la-luce">abbassare la luce</button> per <button class="phrase-token" data-phrase="fare-pace">fare pace</button>, la felicità</div><div class="lyric-cell">Это приглушить свет, чтобы помириться, — счастье.</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+
+    <div class="lyric-cell section it">Strofa 3 · Al Bano</div><div class="lyric-cell section">Куплет 3 · Al Bano</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+    <div class="lyric-cell it">È un bicchiere di vino con un panino, la felicità</div><div class="lyric-cell">Это бокал вина с бутербродом — счастье.</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="lasciare-un-biglietto">lasciarti un biglietto</button> dentro al cassetto, la felicità</div><div class="lyric-cell">Это оставить тебе записку в ящике — счастье.</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="cantare-a-due-voci">cantare a due voci</button>, <button class="phrase-token" data-phrase="quanto-mi-piaci">quanto mi piaci</button>, la felicità</div><div class="lyric-cell">Это петь в два голоса, как же ты мне нравишься, — счастье.</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+
+    <div class="lyric-cell section it">Ritornello</div><div class="lyric-cell section">Припев</div>
+    <div class="lyric-cell it"><button class="phrase-token" data-phrase="senti-nellaria">Senti nell'aria</button> c'è già</div><div class="lyric-cell">Слышишь, в воздухе уже есть</div>
+    <div class="lyric-cell it">La nostra canzone d'amore che va</div><div class="lyric-cell">Наша песня о любви, которая звучит.</div>
+    <div class="lyric-cell it">Come un pensiero che <button class="phrase-token" data-phrase="sa-di">sa di felicità</button></div><div class="lyric-cell">Как мысль, в которой чувствуется счастье.</div>
+    <div class="lyric-cell it">Senti nell'aria c'è già</div><div class="lyric-cell">Слышишь, в воздухе уже есть</div>
+    <div class="lyric-cell it">Un raggio di sole più caldo che va</div><div class="lyric-cell">Более тёплый луч солнца, который идёт дальше.</div>
+    <div class="lyric-cell it">Come un sorriso che sa di felicità</div><div class="lyric-cell">Как улыбка, в которой чувствуется счастье.</div>
+
+    <div class="lyric-cell section it">Strofa 4 · Romina Power</div><div class="lyric-cell section">Куплет 4 · Romina Power</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="una-sera-a-sorpresa">una sera a sorpresa</button>, la luce accesa e la radio che va</div><div class="lyric-cell">Это неожиданный вечер, включённый свет и играющее радио.</div>
+    <div class="lyric-cell it">È un <button class="phrase-token" data-phrase="biglietto-dauguri">biglietto d'auguri</button> pieno di cuori, la felicità</div><div class="lyric-cell">Это поздравительная открытка, вся в сердечках, — счастье.</div>
+    <div class="lyric-cell it">È una <button class="phrase-token" data-phrase="telefonata-non-aspettata">telefonata non aspettata</button>, la felicità</div><div class="lyric-cell">Это неожиданный телефонный звонок — счастье.</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+
+    <div class="lyric-cell section it">Strofa 5 · Al Bano</div><div class="lyric-cell section">Куплет 5 · Al Bano</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+    <div class="lyric-cell it">È una spiaggia di notte, <button class="phrase-token" data-phrase="londa-che-batte">l'onda che batte</button>, la felicità</div><div class="lyric-cell">Это ночной пляж, волна, которая бьётся о берег, — счастье.</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="una-mano-sul-cuore">una mano sul cuore</button> piena d'amore, la felicità</div><div class="lyric-cell">Это рука на сердце, наполненная любовью, — счастье.</div>
+    <div class="lyric-cell it">È <button class="phrase-token" data-phrase="aspettare-laurora">aspettare l'aurora</button> per <button class="phrase-token" data-phrase="farlo-ancora">farlo ancora</button>, la felicità</div><div class="lyric-cell">Это ждать рассвета, чтобы повторить это снова, — счастье.</div>
+    <div class="lyric-cell it">Felicità</div><div class="lyric-cell">Счастье</div>
+
+    <div class="lyric-cell section it">Ritornello</div><div class="lyric-cell section">Припев</div>
+    <div class="lyric-cell it">Senti nell'aria c'è già</div><div class="lyric-cell">Слышишь, в воздухе уже есть</div>
+    <div class="lyric-cell it">La nostra canzone d'amore che va</div><div class="lyric-cell">Наша песня о любви, которая звучит.</div>
+    <div class="lyric-cell it">Come un pensiero che sa di felicità</div><div class="lyric-cell">Как мысль, в которой чувствуется счастье.</div>
+    <div class="lyric-cell it">Senti nell'aria c'è già</div><div class="lyric-cell">Слышишь, в воздухе уже есть</div>
+    <div class="lyric-cell it">Un raggio di sole più caldo che va</div><div class="lyric-cell">Более тёплый луч солнца, который идёт дальше.</div>
+    <div class="lyric-cell it">Come un sorriso che sa di felicità</div><div class="lyric-cell">Как улыбка, в которой чувствуется счастье.</div>
+    <div class="lyric-cell it">Senti nell'aria c'è già</div><div class="lyric-cell">Слышишь, в воздухе уже есть</div>
+    <div class="lyric-cell it">La nostra canzone d'amore che va</div><div class="lyric-cell">Наша песня о любви, которая звучит.</div>
+    <div class="lyric-cell it">Come un pensiero che sa di felicità</div><div class="lyric-cell">Как мысль, в которой чувствуется счастье.</div>
+  </div>
+</section>
+
+
 
 <section id="textbook" class="screen">
   <div class="backrow"><button class="back" data-open="home">←</button><div>Учебник</div></div>
@@ -1180,12 +1539,46 @@ studySelected.onclick=()=>{wordStudyList=currentStudyWords();if(wordStudyList.le
 shuffleParoleDeck();
 if(typeof learnedWidget!=='undefined'&&learnedWidget){learnedWidget.onclick=()=>{const open=learnedWidget.classList.toggle('expanded');learnedWidget.setAttribute('aria-expanded',String(open));if(open)renderLearnedDrawer()}}
 renderDay();updateProgress();renderVerbList();
+
+(function(){
+  const KEY='italianoVisitDays';
+  function dateKey(d){
+    const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');
+    return `${y}-${m}-${day}`;
+  }
+  function initVisitCalendar(){
+    const week=document.getElementById('visitWeek');
+    if(!week)return;
+    let visits=[];
+    try{visits=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}
+    if(!Array.isArray(visits))visits=[];
+    const today=dateKey(new Date());
+    if(!visits.includes(today)){
+      visits.push(today);
+      try{localStorage.setItem(KEY,JSON.stringify(visits))}catch(e){}
+    }
+    const set=new Set(visits);
+    week.querySelectorAll('.visit-day').forEach(el=>{
+      const key=el.dataset.date;
+      if(key && key!==today && set.has(key))el.classList.add('visited');
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initVisitCalendar);
+  else initVisitCalendar();
+})();
+
 </script>
 
-<div class="reader-overlay" id="readerOverlay" aria-hidden="true">
-  <div class="reader-sheet">
-    <div class="reader-head"><b id="readerTitle">Материал</b><div style="display:flex;gap:8px"><button class="reader-close" id="readerPopout" aria-label="Открыть отдельно">↗</button><button class="reader-close" id="readerClose" aria-label="Закрыть">×</button></div></div>
-    <iframe class="reader-frame" id="readerFrame" title="Учебный материал"></iframe>
+
+<div class="phrase-explain-overlay" id="phraseExplainOverlay" aria-hidden="true">
+  <div class="phrase-explain-card">
+    <div class="phrase-explain-head">
+      <b id="phraseExplainTitle"></b>
+      <button class="phrase-explain-close" id="phraseExplainClose" aria-label="Закрыть">×</button>
+    </div>
+    <div class="phrase-explain-ru" id="phraseExplainRu"></div>
+    <div class="phrase-explain-text" id="phraseExplainText"></div>
+    <div class="phrase-explain-example" id="phraseExplainExample"></div>
   </div>
 </div>
 
